@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<UIP version="4" >
+	<Project >
+		<ProjectSettings author="" company="" presentationWidth="1280" presentationHeight="480" maintainAspect="False" >
+			<CustomColors count="16" >#7391ff #ffffff #ffffff #ffffff #ffffff #ffffff #ffffff #ffffff #ffffff #ffffff #ffffff #ffffff #ffffff #ffffff #ffffff #ffffff</CustomColors>
+		</ProjectSettings>
+		<BufferData >
+			<ImageBuffer sourcepath="maps/Icon_TurnLeft_ON.png" hasTransparency="True" />
+			<ImageBuffer sourcepath="maps/Rpm7.png" hasTransparency="True" />
+			<ImageBuffer sourcepath="maps/kmh260.png" hasTransparency="True" />
+			<ImageBuffer sourcepath="models/roundbg_1/maps/gradient.png" hasTransparency="True" />
+		</BufferData>
+		<Classes >
+			<Effect id="VignetteEffect" name="VignetteEffect" sourcepath="effects/VignetteEffect.effect" />
+			<Behavior id="dateAndTime" name="dateAndTime" sourcepath="scripts/dateAndTime.qml" />
+		</Classes>
+		<Graph >
+			<Scene id="Scene" backgroundcolor="0.52549 0.52549 0.52549" bgcolorenable="False" controlledproperty="$slide @slide" >
+				<Layer id="ClusterText" >
+					<Camera id="Camera_003" />
+					<Group id="Telltales" >
+						<Component id="TurnSignals" >
+							<Group id="TurnSignals_001" >
+								<Model id="Icon_TurnLeft_ON2er" >
+									<Material id="Material_001" >
+										<Image id="Material_001_diffusemap" />
+									</Material>
+								</Model>
+								<Model id="Icon_TurnLeft_ON" >
+									<Material id="Material_002" >
+										<Image id="Material_002_diffusemap" />
+									</Material>
+								</Model>
+							</Group>
+						</Component>
+					</Group>
+					<Text id="DateAndTime" />
+					<Behavior id="dateAndTime_001" class="#dateAndTime" />
+				</Layer>
+				<Layer id="Cluster3D2" >
+					<Camera id="Camera_002" />
+					<Group id="Cluster_001" >
+						<Group id="Background_001" />
+						<Group id="MainGauges" >
+							<Group id="LeftGauge_001" >
+								<Group id="GaugeBackground" >
+									<Group id="roundbg_1" importid="__import__root__" >
+										<Model id="qt_gauge_background_round_1" name="qt_gauge_background_round_1" importid="qt_gauge_background_round_1" orientation="Right Handed" position="0 0 -0" rotation="0 -0 0" rotationorder="XYZr" scale="1 1 1" sourcepath="models/roundbg_1/meshes/qt_gauge_background_round_1.mesh" >
+											<Material id="background_1" name="background_1" blendmode="Normal" diffuse="1 1 1" diffusemap="#background_1_diffusemap" emissivepower="0" importid="background_1" opacity="100" specularamount="0" >
+												<Image id="background_1_diffusemap" name="background_1_diffusemap" importid="background_1_diffusemap" sourcepath="models/roundbg_1/maps/gradient.png" />
+												<Image id="background_1_specularreflection" />
+											</Material>
+										</Model>
+									</Group>
+									<Group id="Ring_2" importid="__import__root__" >
+										<Model id="qt_gauge_ring_2" name="qt_gauge_ring_2" importid="qt_gauge_ring_2" orientation="Right Handed" position="0 0 -0" rotation="0 -0 0" rotationorder="XYZr" scale="1 1 1" sourcepath="models/Ring_2/meshes/qt_gauge_ring_2.mesh" >
+											<Material id="Default_white" name="Default_white" blendmode="Normal" diffuse="1 1 1" emissivepower="0" importid="Default_white" opacity="100" specularamount="0" >
+												<Image id="Default_white_specularreflection" />
+											</Material>
+										</Model>
+									</Group>
+								</Group>
+								<Component id="GaugeNeedle" >
+									<Group id="GaugeNeedle_001" >
+										<Light id="Light" />
+										<Group id="needle_2" importid="__import__root__" >
+											<Model id="qt_gauge_needles_2" name="qt_gauge_needles_2" importid="qt_gauge_needles_2" orientation="Right Handed" position="0 0 -0" rotation="0 -0 0" rotationorder="XYZr" scale="1 1 1" sourcepath="models/needle_2/meshes/qt_gauge_needles_2.mesh" >
+												<Material id="qt_gauge_needles:red_transparent" name="qt_gauge_needles:red_transparent" blendmode="Normal" diffuse="1 1 1" emissivepower="0" importid="qt_gauge_needles:red_transparent" opacity="100" specularamount="0" />
+												<Material id="qt_gauge_needles:black_solid" name="qt_gauge_needles:black_solid" blendmode="Normal" diffuse="1 1 1" emissivepower="0" importid="qt_gauge_needles:black_solid" opacity="100" specularamount="0" />
+												<Material id="qt_gauge_needles:solidWhite" name="qt_gauge_needles:solidWhite" blendmode="Normal" diffuse="1 1 1" emissivepower="0" importid="qt_gauge_needles:solidWhite" opacity="100" specularamount="0" >
+													<Image id="qt_gauge_needles:solidWhite_specularreflection" />
+												</Material>
+											</Model>
+										</Group>
+									</Group>
+								</Component>
+								<Group id="GaugeTickmarks" >
+									<Group id="tickmark_260" importid="__import__root__" >
+										<Model id="qt_gauge_tickmarks_260" name="qt_gauge_tickmarks_260" importid="qt_gauge_tickmarks_260" orientation="Right Handed" position="0 0 -0" rotation="0 -0 0" rotationorder="XYZr" scale="1 1 1" sourcepath="models/tickmark_260/meshes/qt_gauge_tickmarks_260.mesh" >
+											<Material id="Default_white_001" name="Default_white" blendmode="Normal" diffuse="1 1 1" emissivepower="0" importid="Default_white" opacity="100" specularamount="0" />
+										</Model>
+									</Group>
+								</Group>
+								<Group id="GaugeNumbers" >
+									<Model id="kmh260" >
+										<Material id="Material_003" >
+											<Image id="Material_003_diffusemap" />
+										</Material>
+									</Model>
+								</Group>
+							</Group>
+							<Group id="RightGauge_001" >
+								<Group id="GaugeBackground_001" >
+									<Group id="roundbg_1_001" importid="__import__root__" >
+										<Model id="qt_gauge_background_round_1_001" name="qt_gauge_background_round_1" importid="qt_gauge_background_round_1" orientation="Right Handed" position="0 0 -0" rotation="0 -0 0" rotationorder="XYZr" scale="1 1 1" sourcepath="models/roundbg_1/meshes/qt_gauge_background_round_1.mesh" >
+											<Material id="background_1_001" name="background_1" blendmode="Normal" diffuse="1 1 1" diffusemap="#background_1_001_diffusemap" emissivepower="0" importid="background_1" opacity="100" specularamount="0" >
+												<Image id="background_1_001_diffusemap" name="background_1_diffusemap" importid="background_1_diffusemap" sourcepath="models/roundbg_1/maps/gradient.png" />
+												<Image id="background_1_001_specularreflection" />
+											</Material>
+										</Model>
+									</Group>
+									<Group id="Ring_2_001" importid="__import__root__" >
+										<Model id="qt_gauge_ring_2_001" name="qt_gauge_ring_2" importid="qt_gauge_ring_2" orientation="Right Handed" position="0 0 -0" rotation="0 -0 0" rotationorder="XYZr" scale="1 1 1" sourcepath="models/Ring_2/meshes/qt_gauge_ring_2.mesh" >
+											<Material id="Default_white_002" name="Default_white" blendmode="Normal" diffuse="1 1 1" emissivepower="0" importid="Default_white" opacity="100" specularamount="0" >
+												<Image id="Default_white_002_specularreflection" />
+											</Material>
+										</Model>
+									</Group>
+								</Group>
+								<Component id="GaugeNeedle_002" >
+									<Group id="GaugeNeedle_003" >
+										<Light id="Light_002" />
+										<Group id="needle_2_001" importid="__import__root__" >
+											<Model id="qt_gauge_needles_2_001" name="qt_gauge_needles_2" importid="qt_gauge_needles_2" orientation="Right Handed" position="0 0 -0" rotation="0 -0 0" rotationorder="XYZr" scale="1 1 1" sourcepath="models/needle_2/meshes/qt_gauge_needles_2.mesh" >
+												<Material id="qt_gauge_needles:red_transparent_001" name="qt_gauge_needles:red_transparent" blendmode="Normal" diffuse="1 1 1" emissivepower="0" importid="qt_gauge_needles:red_transparent" opacity="100" specularamount="0" />
+												<Material id="qt_gauge_needles:black_solid_001" name="qt_gauge_needles:black_solid" blendmode="Normal" diffuse="1 1 1" emissivepower="0" importid="qt_gauge_needles:black_solid" opacity="100" specularamount="0" />
+												<Material id="qt_gauge_needles:solidWhite_001" name="qt_gauge_needles:solidWhite" blendmode="Normal" diffuse="1 1 1" emissivepower="0" importid="qt_gauge_needles:solidWhite" opacity="100" specularamount="0" >
+													<Image id="qt_gauge_needles:solidWhite_001_specularreflection" />
+												</Material>
+											</Model>
+										</Group>
+									</Group>
+								</Component>
+								<Group id="GaugeTickmarks_001" >
+									<Group id="tickmark_8_small" importid="__import__root__" >
+										<Model id="qt_gauge_tickmarks_8_small" name="qt_gauge_tickmarks_8_small" importid="qt_gauge_tickmarks_8_small" orientation="Right Handed" position="0 0 -0" rotation="0 -0 0" rotationorder="XYZr" scale="1 1 1" sourcepath="models/tickmark_8_small/meshes/qt_gauge_tickmarks_8_small.mesh" >
+											<Material id="Default_white_003" name="Default_white" blendmode="Normal" diffuse="1 1 1" emissivepower="0" importid="Default_white" opacity="100" specularamount="0" />
+										</Model>
+									</Group>
+								</Group>
+								<Group id="GaugeNumbers_001" >
+									<Model id="Rpm7" >
+										<Material id="Material_004" >
+											<Image id="Material_004_diffusemap" />
+										</Material>
+									</Model>
+								</Group>
+								<Group id="GaugeText_001" />
+							</Group>
+						</Group>
+					</Group>
+				</Layer>
+				<Layer id="Road3D" >
+					<Camera id="Camera_004" />
+					<Light id="Light_001" />
+					<Effect id="VignetteEffect_002" class="#VignetteEffect" />
+					<Component id="Car" >
+						<Group id="Sportscar_15k" importid="__import__root__" >
+							<Model id="BodyFront" name="BodyFront" importid="BodyFront" orientation="Right Handed" position="-12.4369 103.274 765.204" rotation="-90 -0 0" rotationorder="XYZr" scale="9.85043 9.85043 9.85043" sourcepath="models/Sportscar_15k/meshes/BodyFront.mesh" >
+								<ReferencedMaterial id="glass_tex2" />
+								<ReferencedMaterial id="rubber2" />
+								<Material id="black2" name="black2" blendmode="Normal" diffuse="0 0 0" emissivepower="0" importid="black2" opacity="100" specularamount="0" specularroughness="0.980392" />
+								<ReferencedMaterial id="body2" />
+							</Model>
+							<Model id="backWheels" name="backWheels" importid="backWheels" orientation="Right Handed" position="326.242 131.284 491.438" rotation="-90 -0 0" rotationorder="XYZr" scale="9.85043 9.85043 9.85043" sourcepath="models/Sportscar_15k/meshes/backWheels.mesh" >
+								<Material id="chrome" name="chrome" blendmode="Normal" diffuse="0.668235 0.668235 0.705882" emissivepower="0" importid="chrome" opacity="100" specularamount="0" specularroughness="6.27451" >
+									<Image id="chrome_specularreflection" />
+								</Material>
+								<Material id="rubber" name="rubber" blendmode="Normal" diffuse="0.095729 0.095729 0.095729" emissivepower="0" importid="rubber" opacity="100" specularamount="0" specularroughness="7.84314" />
+								<Material id="rims" name="rims" blendmode="Normal" diffuse="0.142219 0.142219 0.142219" emissivepower="0" importid="rims" opacity="100" specularamount="0" specularroughness="6.27451" >
+									<Image id="rims_specularreflection" />
+								</Material>
+								<Material id="silver" name="silver" blendmode="Normal" diffuse="0.476863 0.486275 0.486275" emissivepower="0" importid="silver" opacity="100" specularamount="0" specularroughness="6.47059" >
+									<Image id="silver_specularreflection" />
+								</Material>
+							</Model>
+							<Model id="BodyBack" name="BodyBack" importid="BodyBack" orientation="Right Handed" position="-12.4369 103.274 765.204" rotation="-90 -0 0" rotationorder="XYZr" scale="9.85043 9.85043 9.85043" sourcepath="models/Sportscar_15k/meshes/BodyBack.mesh" >
+								<Material id="glass_tex" name="glass_tex" blendmode="Normal" diffuse="1 1 1" diffusemap="#glass_tex_diffusemap" emissivepower="0" importid="glass_tex" opacity="100" specularamount="0" specularroughness="5.88235" >
+									<Image id="glass_tex_diffusemap" name="glass_tex_diffusemap" importid="glass_tex_diffusemap" sourcepath="models/Sportscar_15k/maps/c_tex.jpg" />
+									<Image id="glass_tex_specularreflection" />
+								</Material>
+								<ReferencedMaterial id="chrome_001" />
+								<ReferencedMaterial id="silver_001" />
+								<Material id="body" name="body" blendmode="Normal" diffuse="0.527059 0.0313726 0.0313726" emissivepower="0" importid="body" opacity="100" specularamount="0" specularroughness="31.9608" >
+									<Image id="body_specularreflection" />
+								</Material>
+								<ReferencedMaterial id="rubber_001" />
+								<Material id="black" name="black" blendmode="Normal" diffuse="0 0 0" emissivepower="0" importid="black" opacity="100" specularamount="0" specularroughness="0.980392" >
+									<Image id="black_specularreflection" />
+								</Material>
+								<Material id="d_glass" name="d_glass" blendmode="Normal" diffuse="0.160894 0.16512 0.154057" emissivepower="0" importid="d_glass" opacity="100" specularamount="0" specularroughness="6.27451" >
+									<Image id="d_glass_specularreflection" />
+								</Material>
+							</Model>
+							<Model id="frontWheels" name="frontWheels" importid="frontWheels" orientation="Right Handed" position="326.242 131.284 -518.562" rotation="169.137 -0 0" rotationorder="XYZr" scale="9.85043 9.85043 9.85043" sourcepath="models/Sportscar_15k/meshes/frontWheels.mesh" >
+								<ReferencedMaterial id="chrome_002" />
+								<ReferencedMaterial id="rubber_002" />
+								<ReferencedMaterial id="rims_001" />
+								<ReferencedMaterial id="silver_002" />
+							</Model>
+						</Group>
+					</Component>
+					<Component id="Rectangle" >
+						<Model id="Rectangle_001" >
+							<Material id="Default" name="Default" >
+								<Image id="Default_diffusemap" />
+							</Material>
+						</Model>
+					</Component>
+				</Layer>
+				<Layer id="BackgroundContent" >
+					<Camera id="Camera_001" />
+					<Light id="Light_003" />
+					<Effect id="VignetteEffect_001" class="#VignetteEffect" />
+					<Component id="Map" >
+						<Model id="Map_001" >
+							<Material id="Material" >
+								<Image id="Material_diffusemap" />
+							</Material>
+						</Model>
+					</Component>
+				</Layer>
+				<Material id="MaterialContainer" >
+					<Material id="Map_002" >
+						<Image id="Image" />
+					</Material>
+					<Material id="____Default_007" name="____Default" blendmode="Normal" diffuse="0.467451 0.467451 0.467451" emissivepower="0" importid="____Default_0006" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Gray02_023" name="Gray02" blendmode="Normal" diffuse="0.301176 0.301176 0.301176" emissivepower="0" importid="Gray02_0156" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="CoolGray04_030" name="CoolGray04" blendmode="Normal" diffuse="0.235294 0.247843 0.288627" emissivepower="0" importid="CoolGray04_0273" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="car1__env_5_spe0_012" name="car1__env_5_spe0" blendmode="Normal" diffuse="0.8 0.8 0.8" emissivepower="0" importid="car1__env_5_spe0_0051" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="_1___Default_006" name="_1___Default" blendmode="Normal" diffuse="0.467451 0.467451 0.467451" emissivepower="0" importid="_1___Default_0005" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Gray03_002" name="Gray03" blendmode="Normal" diffuse="0.213333 0.213333 0.213333" emissivepower="0" importid="Gray03_0004" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Color_082" name="Color_04" blendmode="Normal" diffuse="0.0909804 0.0909804 0.0909804" emissivepower="0" importid="Color_04_0003" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="CoolGray02_002" name="CoolGray02" blendmode="Normal" diffuse="0.724706 0.724706 0.737255" emissivepower="0" importid="CoolGray02_0001" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Matte__FF0D0D0D0.002_009" name="Matte__FF0D0D0D0.002" blendmode="Normal" diffuse="0.0407843 0.0407843 0.0407843" emissivepower="0" importid="Matte__FF0D0D0D0.002_0055" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Color_083" name="Color_02" blendmode="Normal" diffuse="0.533333 0.533333 0.533333" emissivepower="0" importid="Color_02_0011" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Translucent_Glas.002_004" name="Translucent_Glas.002" blendmode="Normal" diffuse="0.401569 0.401569 0.401569" emissivepower="0" importid="Translucent_Glas.002_0008" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Color_A01_070" name="Color_A01" blendmode="Normal" diffuse="0.64 0 0" emissivepower="0" importid="Color_A01_0074" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="car__env_5_spec0_030" name="car__env_5_spec0" blendmode="Normal" diffuse="0.467451 0.467451 0.467451" emissivepower="0" importid="car__env_5_spec0_0117" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Color_084" name="Color_05" blendmode="Normal" diffuse="0 0 0" emissivepower="0" importid="Color_05_0026" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="car1__env_5_s01_006" name="car1__env_5_s01" blendmode="Normal" diffuse="0.8 0.8 0.8" emissivepower="0" importid="car1__env_5_s01_0011" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Color_085" name="Color_01" blendmode="Normal" diffuse="0.8 0.8 0.8" emissivepower="0" importid="Color_01_0011" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="CoolGray03_012" name="CoolGray03" blendmode="Normal" diffuse="0.705882 0.70902 0.721569" emissivepower="0" importid="CoolGray03_0078" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Orange01.002_002" name="Orange01.002" blendmode="Normal" diffuse="0.768627 0.580392 0.203922" emissivepower="0" importid="Orange01.002_0006" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="vehiclelights03.002_002" name="vehiclelights03.002" blendmode="Normal" diffuse="0.8 0.54902 0" emissivepower="0" importid="vehiclelights03.002_0005" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Matte__FF00CE0F0.002_002" name="Matte__FF00CE0F0.002" blendmode="Normal" diffuse="0 0.643137 0.0439216" emissivepower="0" importid="Matte__FF00CE0F0.002_0002" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="vehiclelights01.002_002" name="vehiclelights01.002" blendmode="Normal" diffuse="0 0.8 0.624314" emissivepower="0" importid="vehiclelights01.002_0006" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="car__env_5_sp01_004" name="car__env_5_sp01" blendmode="Normal" diffuse="0.38902 0.38902 0.407843" emissivepower="0" importid="car__env_5_sp01_0003" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Matte__FF0A0A0A0.002_011" name="Matte__FF0A0A0A0.002" blendmode="Normal" diffuse="0.0282353 0.0282353 0.0282353" emissivepower="0" importid="Matte__FF0A0A0A0.002_0013" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="vehiclelights02.002_001" name="vehiclelights02.002" blendmode="Normal" diffuse="0.8 0.188235 0" emissivepower="0" importid="vehiclelights02.002" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="carpet01_001" name="carpet01" blendmode="Normal" diffuse="0.216471 0.216471 0.216471" emissivepower="0" importid="carpet01" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Gray01_016" name="Gray01" blendmode="Normal" diffuse="0.420392 0.420392 0.420392" emissivepower="0" importid="Gray01_0066" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="CoolGray01_002" name="CoolGray01" blendmode="Normal" diffuse="0.756078 0.756078 0.768627" emissivepower="0" importid="CoolGray01_0006" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="____Default.002_007" name="____Default.002" blendmode="Normal" diffuse="0.467451 0.467451 0.467451" emissivepower="0" importid="____Default.002_0006" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Gray02.002_023" name="Gray02.002" blendmode="Normal" diffuse="0.301176 0.301176 0.301176" emissivepower="0" importid="Gray02.002_0156" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="CoolGray04.002_030" name="CoolGray04.002" blendmode="Normal" diffuse="0.235294 0.247843 0.288627" emissivepower="0" importid="CoolGray04.002_0273" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="car1__env_5_spe0.002_012" name="car1__env_5_spe0.002" blendmode="Normal" diffuse="0.8 0.8 0.8" emissivepower="0" importid="car1__env_5_spe0.002_0051" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="_1___Default.002_006" name="_1___Default.002" blendmode="Normal" diffuse="0.467451 0.467451 0.467451" emissivepower="0" importid="_1___Default.002_0005" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Gray03.002_002" name="Gray03.002" blendmode="Normal" diffuse="0.213333 0.213333 0.213333" emissivepower="0" importid="Gray03.002_0004" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Color_086" name="Color_04.002" blendmode="Normal" diffuse="0.0909804 0.0909804 0.0909804" emissivepower="0" importid="Color_04.002_0003" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="CoolGray02.002_002" name="CoolGray02.002" blendmode="Normal" diffuse="0.724706 0.724706 0.737255" emissivepower="0" importid="CoolGray02.002_0001" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Matte__FF0D0D0D0.001_009" name="Matte__FF0D0D0D0.001" blendmode="Normal" diffuse="0.0407843 0.0407843 0.0407843" emissivepower="0" importid="Matte__FF0D0D0D0.001_0055" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Color_087" name="Color_02.002" blendmode="Normal" diffuse="0.533333 0.533333 0.533333" emissivepower="0" importid="Color_02.002_0011" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Translucent_Glas.001_004" name="Translucent_Glas.001" blendmode="Normal" diffuse="0.401569 0.401569 0.401569" emissivepower="0" importid="Translucent_Glas.001_0008" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Color_A01.002_070" name="Color_A01.002" blendmode="Normal" diffuse="0.64 0 0" emissivepower="0" importid="Color_A01.002_0074" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="car__env_5_spec0.002_030" name="car__env_5_spec0.002" blendmode="Normal" diffuse="0.467451 0.467451 0.467451" emissivepower="0" importid="car__env_5_spec0.002_0117" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Color_088" name="Color_05.002" blendmode="Normal" diffuse="0 0 0" emissivepower="0" importid="Color_05.002_0026" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="car1__env_5_s01.002_006" name="car1__env_5_s01.002" blendmode="Normal" diffuse="0.8 0.8 0.8" emissivepower="0" importid="car1__env_5_s01.002_0011" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Color_089" name="Color_01.002" blendmode="Normal" diffuse="0.8 0.8 0.8" emissivepower="0" importid="Color_01.002_0011" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="CoolGray03.002_012" name="CoolGray03.002" blendmode="Normal" diffuse="0.705882 0.70902 0.721569" emissivepower="0" importid="CoolGray03.002_0078" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Orange01.001_002" name="Orange01.001" blendmode="Normal" diffuse="0.768627 0.580392 0.203922" emissivepower="0" importid="Orange01.001_0006" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="vehiclelights03.001_002" name="vehiclelights03.001" blendmode="Normal" diffuse="0.8 0.54902 0" emissivepower="0" importid="vehiclelights03.001_0005" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Matte__FF00CE0F0.001_002" name="Matte__FF00CE0F0.001" blendmode="Normal" diffuse="0 0.643137 0.0439216" emissivepower="0" importid="Matte__FF00CE0F0.001_0002" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="vehiclelights01.001_002" name="vehiclelights01.001" blendmode="Normal" diffuse="0 0.8 0.624314" emissivepower="0" importid="vehiclelights01.001_0006" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="car__env_5_sp01.002_004" name="car__env_5_sp01.002" blendmode="Normal" diffuse="0.38902 0.38902 0.407843" emissivepower="0" importid="car__env_5_sp01.002_0003" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Matte__FF0A0A0A0.001_011" name="Matte__FF0A0A0A0.001" blendmode="Normal" diffuse="0.0282353 0.0282353 0.0282353" emissivepower="0" importid="Matte__FF0A0A0A0.001_0013" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="vehiclelights02.001_001" name="vehiclelights02.001" blendmode="Normal" diffuse="0.8 0.188235 0" emissivepower="0" importid="vehiclelights02.001" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="carpet01.002_001" name="carpet01.002" blendmode="Normal" diffuse="0.216471 0.216471 0.216471" emissivepower="0" importid="carpet01.002" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Gray01.002_016" name="Gray01.002" blendmode="Normal" diffuse="0.420392 0.420392 0.420392" emissivepower="0" importid="Gray01.002_0066" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="CoolGray01.002_002" name="CoolGray01.002" blendmode="Normal" diffuse="0.756078 0.756078 0.768627" emissivepower="0" importid="CoolGray01.002_0006" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="____Default.001_007" name="____Default.001" blendmode="Normal" diffuse="0.467451 0.467451 0.467451" emissivepower="0" importid="____Default.001_0006" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Gray02.001_023" name="Gray02.001" blendmode="Normal" diffuse="0.301176 0.301176 0.301176" emissivepower="0" importid="Gray02.001_0156" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="CoolGray04.001_030" name="CoolGray04.001" blendmode="Normal" diffuse="0.235294 0.247843 0.288627" emissivepower="0" importid="CoolGray04.001_0273" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="car1__env_5_spe0.001_012" name="car1__env_5_spe0.001" blendmode="Normal" diffuse="0.8 0.8 0.8" emissivepower="0" importid="car1__env_5_spe0.001_0051" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="_1___Default.001_006" name="_1___Default.001" blendmode="Normal" diffuse="0.467451 0.467451 0.467451" emissivepower="0" importid="_1___Default.001_0005" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Gray03.001_002" name="Gray03.001" blendmode="Normal" diffuse="0.213333 0.213333 0.213333" emissivepower="0" importid="Gray03.001_0004" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Color_090" name="Color_04.001" blendmode="Normal" diffuse="0.0909804 0.0909804 0.0909804" emissivepower="0" importid="Color_04.001_0003" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="CoolGray02.001_002" name="CoolGray02.001" blendmode="Normal" diffuse="0.724706 0.724706 0.737255" emissivepower="0" importid="CoolGray02.001_0001" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Matte__FF0D0D0D0_009" name="Matte__FF0D0D0D0" blendmode="Normal" diffuse="0.0407843 0.0407843 0.0407843" emissivepower="0" importid="Matte__FF0D0D0D0_0055" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Color_091" name="Color_02.001" blendmode="Normal" diffuse="0.533333 0.533333 0.533333" emissivepower="0" importid="Color_02.001_0011" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Translucent_Glas_004" name="Translucent_Glas" blendmode="Normal" diffuse="0.401569 0.401569 0.401569" emissivepower="0" importid="Translucent_Glas_0008" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Color_A01.001_070" name="Color_A01.001" blendmode="Normal" diffuse="0.64 0 0" emissivepower="0" importid="Color_A01.001_0074" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="car__env_5_spec0.001_030" name="car__env_5_spec0.001" blendmode="Normal" diffuse="0.467451 0.467451 0.467451" emissivepower="0" importid="car__env_5_spec0.001_0117" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Color_092" name="Color_05.001" blendmode="Normal" diffuse="0 0 0" emissivepower="0" importid="Color_05.001_0026" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="car1__env_5_s01.001_006" name="car1__env_5_s01.001" blendmode="Normal" diffuse="0.8 0.8 0.8" emissivepower="0" importid="car1__env_5_s01.001_0011" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Color_093" name="Color_01.001" blendmode="Normal" diffuse="0.8 0.8 0.8" emissivepower="0" importid="Color_01.001_0011" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="CoolGray03.001_012" name="CoolGray03.001" blendmode="Normal" diffuse="0.705882 0.70902 0.721569" emissivepower="0" importid="CoolGray03.001_0078" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Orange01_002" name="Orange01" blendmode="Normal" diffuse="0.768627 0.580392 0.203922" emissivepower="0" importid="Orange01_0006" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="vehiclelights03_002" name="vehiclelights03" blendmode="Normal" diffuse="0.8 0.54902 0" emissivepower="0" importid="vehiclelights03_0005" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Matte__FF00CE0F0_002" name="Matte__FF00CE0F0" blendmode="Normal" diffuse="0 0.643137 0.0439216" emissivepower="0" importid="Matte__FF00CE0F0_0002" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="vehiclelights01_002" name="vehiclelights01" blendmode="Normal" diffuse="0 0.8 0.624314" emissivepower="0" importid="vehiclelights01_0006" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="car__env_5_sp01.001_004" name="car__env_5_sp01.001" blendmode="Normal" diffuse="0.38902 0.38902 0.407843" emissivepower="0" importid="car__env_5_sp01.001_0003" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Matte__FF0A0A0A0_011" name="Matte__FF0A0A0A0" blendmode="Normal" diffuse="0.0282353 0.0282353 0.0282353" emissivepower="0" importid="Matte__FF0A0A0A0_0013" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="vehiclelights02_001" name="vehiclelights02" blendmode="Normal" diffuse="0.8 0.188235 0" emissivepower="0" importid="vehiclelights02" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="carpet01.001_001" name="carpet01.001" blendmode="Normal" diffuse="0.216471 0.216471 0.216471" emissivepower="0" importid="carpet01.001" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Gray01.001_016" name="Gray01.001" blendmode="Normal" diffuse="0.420392 0.420392 0.420392" emissivepower="0" importid="Gray01.001_0066" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="CoolGray01.001_002" name="CoolGray01.001" blendmode="Normal" diffuse="0.756078 0.756078 0.768627" emissivepower="0" importid="CoolGray01.001_0006" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="_1___Default1_001" name="_1___Default" blendmode="Normal" diffuse="0.467451 0.467451 0.467451" emissivepower="0" importid="_1___Default" opacity="100" specularamount="0" specularroughness="9.60784" />
+					<Material id="Icon_TurnLeft_ON_001" >
+						<Image id="Image_001" />
+					</Material>
+					<Material id="_1___Default2" />
+					<Material id="black_001" />
+					<Material id="black2_001" />
+					<Material id="body_001" />
+					<Material id="body2_001" />
+					<Material id="chrome_003" />
+					<Material id="d_glass_001" />
+					<Material id="glass_tex_001" >
+						<Image id="glass_tex_diffusemap_001" />
+					</Material>
+					<Material id="glass_tex2_001" >
+						<Image id="glass_tex2_diffusemap" />
+					</Material>
+					<Material id="rims_002" />
+					<Material id="rubber_003" />
+					<Material id="rubber2_001" />
+					<Material id="silver_003" />
+				</Material>
+			</Scene>
+		</Graph>
+		<Logic >
+			<State name="Master Slide" component="#Scene" >
+				<Add ref="#ClusterText" name="Telltales" aodither="False" disabledepthprepass="False" disabledepthtest="False" multisampleaa="SSAA" probebright="231" progressiveaa="8x" temporalaa="True" />
+				<Add ref="#Camera_003" fov="8.16" orthographic="True" position="0 0 -435" />
+				<Add ref="#Telltales" name="Telltales" />
+				<Add ref="#TurnSignals" name="TurnSignals" />
+				<Add ref="#DateAndTime" name="DateAndTime" controlledproperty="$dateAndTime textstring" font="TitilliumWeb-Regular" position="0 193 0" scale="0.2 0.2 0.2" size="120" textstring="Date and Time" />
+				<Add ref="#Cluster3D2" name="Cluster3D" aodither="False" disabledepthprepass="False" disabledepthtest="False" multisampleaa="SSAA" probe2fade="1" probebright="231" probefov="169.26" probehorizon="-1" progressiveaa="8x" temporalaa="True" />
+				<Add ref="#Camera_002" fov="8.16" position="0 0 -435" />
+				<Add ref="#Cluster_001" name="Cluster" position="0 0 0" />
+				<Add ref="#Background_001" name="Background" position="0 0 0" rotation="-90 0 0" scale="1.2 1.2 1.2" />
+				<Add ref="#MainGauges" name="MainGauges" />
+				<Add ref="#LeftGauge_001" name="LeftGauge" position="-52 0 0" rotation="-60 -30 0" scale="2 2 2" />
+				<Add ref="#GaugeBackground" name="GaugeBackground" locked="False" position="0 0 0" scale="1 1 1" />
+				<Add ref="#roundbg_1" name="roundbg_1" importfile="models/roundbg_1/roundbg_1.import" locked="False" scale="0.9 0.9 0.9" sourcepath="models/roundbg_1/roundbg_1.import" />
+				<Add ref="#qt_gauge_background_round_1" importfile="models/roundbg_1/roundbg_1.import" locked="False" />
+				<Add ref="#background_1" bumpamount="1" importfile="models/roundbg_1/roundbg_1.import" ior="0.18" locked="False" specularamount="0.5" specularreflection="#background_1_specularreflection" specularroughness="0.321" />
+				<Add ref="#background_1_diffusemap" importfile="models/roundbg_1/roundbg_1.import" locked="False" sourcepath="maps/gradient_lines_001.png" />
+				<Add ref="#background_1_specularreflection" locked="False" mappingmode="Environmental Mapping" sourcepath="maps/OpenfootageNET_garage-512.hdr" />
+				<Add ref="#Ring_2" name="Ring_2" importfile="models/Ring_2/Ring_2.import" locked="False" sourcepath="models/Ring_2/Ring_2.import" />
+				<Add ref="#qt_gauge_ring_2" importfile="models/Ring_2/Ring_2.import" locked="False" />
+				<Add ref="#Default_white" diffuse="0.0980392 0.0980392 0.0980392" importfile="models/Ring_2/Ring_2.import" locked="False" specularamount="1" specularreflection="#Default_white_specularreflection" />
+				<Add ref="#Default_white_specularreflection" locked="False" mappingmode="Environmental Mapping" sourcepath="maps/OpenfootageNET_garage-512.hdr" />
+				<Add ref="#GaugeNeedle" name="GaugeNeedle" controlledproperty="$speed @timeline" position="0 -2.5 0" />
+				<Add ref="#GaugeTickmarks" name="GaugeTickmarks" />
+				<Add ref="#tickmark_260" name="tickmark_260" importfile="models/tickmark_260/tickmark_260.import" locked="False" sourcepath="models/tickmark_260/tickmark_260.import" />
+				<Add ref="#qt_gauge_tickmarks_260" importfile="models/tickmark_260/tickmark_260.import" locked="False" />
+				<Add ref="#Default_white_001" diffuse="1 1 1" importfile="models/tickmark_260/tickmark_260.import" locked="False" />
+				<Add ref="#GaugeNumbers" name="GaugeNumbers" position="0.597784 2 0.170977" rotation="90 0 0" scale="0.17 0.17 0.17" />
+				<Add ref="#kmh260" name="kmh260" position="1.52588e-05 -3.8147e-06 11.4355" rotation="0 0 0" scale="1.024 1.024 1" sourcepath="#Rectangle" />
+				<Add ref="#Material_003" bumpamount="0.5" diffusemap="#Material_003_diffusemap" emissivepower="0" shaderlighting="None" />
+				<Add ref="#Material_003_diffusemap" sourcepath="maps/kmh260.png" />
+				<Add ref="#RightGauge_001" name="RightGauge" position="52 0 0" rotation="-60 30 0" scale="2 2 2" />
+				<Add ref="#GaugeBackground_001" name="GaugeBackground" position="0 0 0" scale="1 1 1" />
+				<Add ref="#roundbg_1_001" name="roundbg_1" importfile="models/roundbg_1/roundbg_1.import" scale="0.9 0.9 0.9" sourcepath="models/roundbg_1/roundbg_1.import" />
+				<Add ref="#qt_gauge_background_round_1_001" importfile="models/roundbg_1/roundbg_1.import" />
+				<Add ref="#background_1_001" bumpamount="1" importfile="models/roundbg_1/roundbg_1.import" ior="0.19" specularamount="0.5" specularreflection="#background_1_001_specularreflection" specularroughness="0.31069" />
+				<Add ref="#background_1_001_diffusemap" importfile="models/roundbg_1/roundbg_1.import" sourcepath="maps/gradient_lines_001.png" />
+				<Add ref="#background_1_001_specularreflection" mappingmode="Environmental Mapping" sourcepath="maps/OpenfootageNET_garage-512.hdr" />
+				<Add ref="#Ring_2_001" name="Ring_2" importfile="models/Ring_2/Ring_2.import" sourcepath="models/Ring_2/Ring_2.import" />
+				<Add ref="#qt_gauge_ring_2_001" importfile="models/Ring_2/Ring_2.import" />
+				<Add ref="#Default_white_002" diffuse="0.0980392 0.0980392 0.0980392" importfile="models/Ring_2/Ring_2.import" specularamount="1" specularreflection="#Default_white_002_specularreflection" />
+				<Add ref="#Default_white_002_specularreflection" mappingmode="Environmental Mapping" sourcepath="maps/OpenfootageNET_garage-512.hdr" />
+				<Add ref="#GaugeNeedle_002" name="GaugeNeedle" controlledproperty="$rpm @timeline" position="0 0.5 0" />
+				<Add ref="#GaugeTickmarks_001" name="GaugeTickmarks" />
+				<Add ref="#tickmark_8_small" name="tickmark_8_small" importfile="models/tickmark_8_small/tickmark_8_small.import" scale="1.3 1.3 1.3" sourcepath="models/tickmark_8_small/tickmark_8_small.import" />
+				<Add ref="#qt_gauge_tickmarks_8_small" importfile="models/tickmark_8_small/tickmark_8_small.import" />
+				<Add ref="#Default_white_003" importfile="models/tickmark_8_small/tickmark_8_small.import" />
+				<Add ref="#GaugeNumbers_001" name="GaugeNumbers" rotation="90 0 0" scale="0.17 0.17 0.17" />
+				<Add ref="#Rpm7" name="Rpm7" position="1.77449 4.30839 0" scale="1.24 1.24 1.24" sourcepath="#Rectangle" />
+				<Add ref="#Material_004" diffusemap="#Material_004_diffusemap" shaderlighting="None" />
+				<Add ref="#Material_004_diffusemap" sourcepath="maps/Rpm7.png" />
+				<Add ref="#GaugeText_001" name="GaugeText" />
+				<Add ref="#Road3D" name="Road3D" aodither="False" aostrength="3" disabledepthprepass="False" disabledepthtest="False" height="60" heightunits="percent" left="20" leftunits="percent" multisampleaa="SSAA" progressiveaa="8x" temporalaa="True" top="20" topunits="percent" width="60" widthunits="percent" />
+				<Add ref="#Camera_004" fov="51.12" orthographic="False" scaleanchor="Center" />
+				<Add ref="#Light_001" name="Light" brightness="200" expfade="0" lighttype="Point" position="0 0 -575" />
+				<Add ref="#VignetteEffect_002" name="VignetteEffect" vig_color="0 0 0" vig_radius="0.4" vig_strenght="15" />
+				<Add ref="#Rectangle" name="Rectangle" scale="0.8 0.8 0.8" />
+				<Add ref="#BackgroundContent" name="Map" aodither="False" aostrength="0" disabledepthprepass="False" disabledepthtest="False" eyeball="False" height="288" heightunits="pixels" left="20" leftunits="percent" multisampleaa="None" probehorizon="-0.98002" progressiveaa="None" sourcepath="" temporalaa="False" top="20" topunits="percent" width="768" widthunits="pixels" />
+				<Add ref="#Camera_001" fov="4.58" />
+				<Add ref="#Light_003" name="Light" lighttype="Point" position="0 0 -23" />
+				<Add ref="#VignetteEffect_001" name="VignetteEffect" vig_color="0 0 0" vig_radius="0.3" vig_strenght="15" />
+				<Add ref="#Map" name="Map" controlledproperty="$mapOpa @timeline" opacity="100" />
+				<Add ref="#MaterialContainer" name="MaterialContainer" />
+				<Add ref="#Map_002" name="Map" blendmode="Normal" bumpamount="0.5" diffuse="1 1 1" diffuselightwrap="0" diffusemap="#Image" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="" importid="" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="0" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Image" name="Image" importfile="" importid="" mappingmode="UV Mapping" pivotu="0" pivotv="0" positionu="0" positionv="0" rotationuv="0" scaleu="1" scalev="1" sourcepath="scripts/Map.jpg" subpresentation="" tilingmodehorz="No Tiling" tilingmodevert="No Tiling" type="Image" />
+				<Add ref="#____Default_007" name="____Default" blendmode="Normal" bumpamount="0.5" diffuse="0.467451 0.467451 0.467451" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="____Default_0006" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Gray02_023" name="Gray02" blendmode="Normal" bumpamount="0.5" diffuse="0.301176 0.301176 0.301176" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Gray02_0156" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#CoolGray04_030" name="CoolGray04" blendmode="Normal" bumpamount="0.5" diffuse="0.235294 0.247843 0.288627" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="CoolGray04_0273" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#car1__env_5_spe0_012" name="car1__env_5_spe0" blendmode="Normal" bumpamount="0.5" diffuse="0.8 0.8 0.8" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="car1__env_5_spe0_0051" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#_1___Default_006" name="_1___Default" blendmode="Normal" bumpamount="0.5" diffuse="0.467451 0.467451 0.467451" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="_1___Default_0005" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Gray03_002" name="Gray03" blendmode="Normal" bumpamount="0.5" diffuse="0.213333 0.213333 0.213333" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Gray03_0004" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Color_082" name="Color_04" blendmode="Normal" bumpamount="0.5" diffuse="0.0909804 0.0909804 0.0909804" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Color_04_0003" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#CoolGray02_002" name="CoolGray02" blendmode="Normal" bumpamount="0.5" diffuse="0.724706 0.724706 0.737255" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="CoolGray02_0001" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Matte__FF0D0D0D0.002_009" name="Matte__FF0D0D0D0.002" blendmode="Normal" bumpamount="0.5" diffuse="0.0407843 0.0407843 0.0407843" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Matte__FF0D0D0D0.002_0055" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Color_083" name="Color_02" blendmode="Normal" bumpamount="0.5" diffuse="0.533333 0.533333 0.533333" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Color_02_0011" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Translucent_Glas.002_004" name="Translucent_Glas.002" blendmode="Normal" bumpamount="0.5" diffuse="0.401569 0.401569 0.401569" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Translucent_Glas.002_0008" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Color_A01_070" name="Color_A01" blendmode="Normal" bumpamount="0.5" diffuse="0.64 0 0" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Color_A01_0074" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#car__env_5_spec0_030" name="car__env_5_spec0" blendmode="Normal" bumpamount="0.5" diffuse="0.467451 0.467451 0.467451" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="car__env_5_spec0_0117" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Color_084" name="Color_05" blendmode="Normal" bumpamount="0.5" diffuse="0 0 0" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Color_05_0026" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#car1__env_5_s01_006" name="car1__env_5_s01" blendmode="Normal" bumpamount="0.5" diffuse="0.8 0.8 0.8" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="car1__env_5_s01_0011" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Color_085" name="Color_01" blendmode="Normal" bumpamount="0.5" diffuse="0.8 0.8 0.8" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Color_01_0011" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#CoolGray03_012" name="CoolGray03" blendmode="Normal" bumpamount="0.5" diffuse="0.705882 0.70902 0.721569" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="CoolGray03_0078" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Orange01.002_002" name="Orange01.002" blendmode="Normal" bumpamount="0.5" diffuse="0.768627 0.580392 0.203922" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Orange01.002_0006" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#vehiclelights03.002_002" name="vehiclelights03.002" blendmode="Normal" bumpamount="0.5" diffuse="0.8 0.54902 0" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="vehiclelights03.002_0005" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Matte__FF00CE0F0.002_002" name="Matte__FF00CE0F0.002" blendmode="Normal" bumpamount="0.5" diffuse="0 0.643137 0.0439216" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Matte__FF00CE0F0.002_0002" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#vehiclelights01.002_002" name="vehiclelights01.002" blendmode="Normal" bumpamount="0.5" diffuse="0 0.8 0.624314" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="vehiclelights01.002_0006" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#car__env_5_sp01_004" name="car__env_5_sp01" blendmode="Normal" bumpamount="0.5" diffuse="0.38902 0.38902 0.407843" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="car__env_5_sp01_0003" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Matte__FF0A0A0A0.002_011" name="Matte__FF0A0A0A0.002" blendmode="Normal" bumpamount="0.5" diffuse="0.0282353 0.0282353 0.0282353" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Matte__FF0A0A0A0.002_0013" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#vehiclelights02.002_001" name="vehiclelights02.002" blendmode="Normal" bumpamount="0.5" diffuse="0.8 0.188235 0" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="vehiclelights02.002" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#carpet01_001" name="carpet01" blendmode="Normal" bumpamount="0.5" diffuse="0.216471 0.216471 0.216471" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="carpet01" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Gray01_016" name="Gray01" blendmode="Normal" bumpamount="0.5" diffuse="0.420392 0.420392 0.420392" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Gray01_0066" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#CoolGray01_002" name="CoolGray01" blendmode="Normal" bumpamount="0.5" diffuse="0.756078 0.756078 0.768627" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="CoolGray01_0006" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#____Default.002_007" name="____Default.002" blendmode="Normal" bumpamount="0.5" diffuse="0.467451 0.467451 0.467451" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="____Default.002_0006" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Gray02.002_023" name="Gray02.002" blendmode="Normal" bumpamount="0.5" diffuse="0.301176 0.301176 0.301176" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Gray02.002_0156" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#CoolGray04.002_030" name="CoolGray04.002" blendmode="Normal" bumpamount="0.5" diffuse="0.235294 0.247843 0.288627" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="CoolGray04.002_0273" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#car1__env_5_spe0.002_012" name="car1__env_5_spe0.002" blendmode="Normal" bumpamount="0.5" diffuse="0.8 0.8 0.8" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="car1__env_5_spe0.002_0051" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#_1___Default.002_006" name="_1___Default.002" blendmode="Normal" bumpamount="0.5" diffuse="0.467451 0.467451 0.467451" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="_1___Default.002_0005" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Gray03.002_002" name="Gray03.002" blendmode="Normal" bumpamount="0.5" diffuse="0.213333 0.213333 0.213333" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Gray03.002_0004" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Color_086" name="Color_04.002" blendmode="Normal" bumpamount="0.5" diffuse="0.0909804 0.0909804 0.0909804" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Color_04.002_0003" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#CoolGray02.002_002" name="CoolGray02.002" blendmode="Normal" bumpamount="0.5" diffuse="0.724706 0.724706 0.737255" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="CoolGray02.002_0001" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Matte__FF0D0D0D0.001_009" name="Matte__FF0D0D0D0.001" blendmode="Normal" bumpamount="0.5" diffuse="0.0407843 0.0407843 0.0407843" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Matte__FF0D0D0D0.001_0055" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Color_087" name="Color_02.002" blendmode="Normal" bumpamount="0.5" diffuse="0.533333 0.533333 0.533333" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Color_02.002_0011" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Translucent_Glas.001_004" name="Translucent_Glas.001" blendmode="Normal" bumpamount="0.5" diffuse="0.401569 0.401569 0.401569" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Translucent_Glas.001_0008" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Color_A01.002_070" name="Color_A01.002" blendmode="Normal" bumpamount="0.5" diffuse="0.64 0 0" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Color_A01.002_0074" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#car__env_5_spec0.002_030" name="car__env_5_spec0.002" blendmode="Normal" bumpamount="0.5" diffuse="0.467451 0.467451 0.467451" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="car__env_5_spec0.002_0117" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Color_088" name="Color_05.002" blendmode="Normal" bumpamount="0.5" diffuse="0 0 0" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Color_05.002_0026" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#car1__env_5_s01.002_006" name="car1__env_5_s01.002" blendmode="Normal" bumpamount="0.5" diffuse="0.8 0.8 0.8" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="car1__env_5_s01.002_0011" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Color_089" name="Color_01.002" blendmode="Normal" bumpamount="0.5" diffuse="0.8 0.8 0.8" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Color_01.002_0011" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#CoolGray03.002_012" name="CoolGray03.002" blendmode="Normal" bumpamount="0.5" diffuse="0.705882 0.70902 0.721569" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="CoolGray03.002_0078" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Orange01.001_002" name="Orange01.001" blendmode="Normal" bumpamount="0.5" diffuse="0.768627 0.580392 0.203922" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Orange01.001_0006" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#vehiclelights03.001_002" name="vehiclelights03.001" blendmode="Normal" bumpamount="0.5" diffuse="0.8 0.54902 0" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="vehiclelights03.001_0005" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Matte__FF00CE0F0.001_002" name="Matte__FF00CE0F0.001" blendmode="Normal" bumpamount="0.5" diffuse="0 0.643137 0.0439216" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Matte__FF00CE0F0.001_0002" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#vehiclelights01.001_002" name="vehiclelights01.001" blendmode="Normal" bumpamount="0.5" diffuse="0 0.8 0.624314" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="vehiclelights01.001_0006" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#car__env_5_sp01.002_004" name="car__env_5_sp01.002" blendmode="Normal" bumpamount="0.5" diffuse="0.38902 0.38902 0.407843" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="car__env_5_sp01.002_0003" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Matte__FF0A0A0A0.001_011" name="Matte__FF0A0A0A0.001" blendmode="Normal" bumpamount="0.5" diffuse="0.0282353 0.0282353 0.0282353" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Matte__FF0A0A0A0.001_0013" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#vehiclelights02.001_001" name="vehiclelights02.001" blendmode="Normal" bumpamount="0.5" diffuse="0.8 0.188235 0" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="vehiclelights02.001" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#carpet01.002_001" name="carpet01.002" blendmode="Normal" bumpamount="0.5" diffuse="0.216471 0.216471 0.216471" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="carpet01.002" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Gray01.002_016" name="Gray01.002" blendmode="Normal" bumpamount="0.5" diffuse="0.420392 0.420392 0.420392" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Gray01.002_0066" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#CoolGray01.002_002" name="CoolGray01.002" blendmode="Normal" bumpamount="0.5" diffuse="0.756078 0.756078 0.768627" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="CoolGray01.002_0006" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#____Default.001_007" name="____Default.001" blendmode="Normal" bumpamount="0.5" diffuse="0.467451 0.467451 0.467451" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="____Default.001_0006" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Gray02.001_023" name="Gray02.001" blendmode="Normal" bumpamount="0.5" diffuse="0.301176 0.301176 0.301176" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Gray02.001_0156" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#CoolGray04.001_030" name="CoolGray04.001" blendmode="Normal" bumpamount="0.5" diffuse="0.235294 0.247843 0.288627" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="CoolGray04.001_0273" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#car1__env_5_spe0.001_012" name="car1__env_5_spe0.001" blendmode="Normal" bumpamount="0.5" diffuse="0.8 0.8 0.8" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="car1__env_5_spe0.001_0051" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#_1___Default.001_006" name="_1___Default.001" blendmode="Normal" bumpamount="0.5" diffuse="0.467451 0.467451 0.467451" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="_1___Default.001_0005" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Gray03.001_002" name="Gray03.001" blendmode="Normal" bumpamount="0.5" diffuse="0.213333 0.213333 0.213333" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Gray03.001_0004" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Color_090" name="Color_04.001" blendmode="Normal" bumpamount="0.5" diffuse="0.0909804 0.0909804 0.0909804" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Color_04.001_0003" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#CoolGray02.001_002" name="CoolGray02.001" blendmode="Normal" bumpamount="0.5" diffuse="0.724706 0.724706 0.737255" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="CoolGray02.001_0001" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Matte__FF0D0D0D0_009" name="Matte__FF0D0D0D0" blendmode="Normal" bumpamount="0.5" diffuse="0.0407843 0.0407843 0.0407843" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Matte__FF0D0D0D0_0055" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Color_091" name="Color_02.001" blendmode="Normal" bumpamount="0.5" diffuse="0.533333 0.533333 0.533333" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Color_02.001_0011" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Translucent_Glas_004" name="Translucent_Glas" blendmode="Normal" bumpamount="0.5" diffuse="0.401569 0.401569 0.401569" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Translucent_Glas_0008" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Color_A01.001_070" name="Color_A01.001" blendmode="Normal" bumpamount="0.5" diffuse="0.64 0 0" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Color_A01.001_0074" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#car__env_5_spec0.001_030" name="car__env_5_spec0.001" blendmode="Normal" bumpamount="0.5" diffuse="0.467451 0.467451 0.467451" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="car__env_5_spec0.001_0117" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Color_092" name="Color_05.001" blendmode="Normal" bumpamount="0.5" diffuse="0 0 0" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Color_05.001_0026" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#car1__env_5_s01.001_006" name="car1__env_5_s01.001" blendmode="Normal" bumpamount="0.5" diffuse="0.8 0.8 0.8" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="car1__env_5_s01.001_0011" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Color_093" name="Color_01.001" blendmode="Normal" bumpamount="0.5" diffuse="0.8 0.8 0.8" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Color_01.001_0011" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#CoolGray03.001_012" name="CoolGray03.001" blendmode="Normal" bumpamount="0.5" diffuse="0.705882 0.70902 0.721569" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="CoolGray03.001_0078" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Orange01_002" name="Orange01" blendmode="Normal" bumpamount="0.5" diffuse="0.768627 0.580392 0.203922" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Orange01_0006" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#vehiclelights03_002" name="vehiclelights03" blendmode="Normal" bumpamount="0.5" diffuse="0.8 0.54902 0" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="vehiclelights03_0005" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Matte__FF00CE0F0_002" name="Matte__FF00CE0F0" blendmode="Normal" bumpamount="0.5" diffuse="0 0.643137 0.0439216" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Matte__FF00CE0F0_0002" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#vehiclelights01_002" name="vehiclelights01" blendmode="Normal" bumpamount="0.5" diffuse="0 0.8 0.624314" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="vehiclelights01_0006" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#car__env_5_sp01.001_004" name="car__env_5_sp01.001" blendmode="Normal" bumpamount="0.5" diffuse="0.38902 0.38902 0.407843" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="car__env_5_sp01.001_0003" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Matte__FF0A0A0A0_011" name="Matte__FF0A0A0A0" blendmode="Normal" bumpamount="0.5" diffuse="0.0282353 0.0282353 0.0282353" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Matte__FF0A0A0A0_0013" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#vehiclelights02_001" name="vehiclelights02" blendmode="Normal" bumpamount="0.5" diffuse="0.8 0.188235 0" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="vehiclelights02" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#carpet01.001_001" name="carpet01.001" blendmode="Normal" bumpamount="0.5" diffuse="0.216471 0.216471 0.216471" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="carpet01.001" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Gray01.001_016" name="Gray01.001" blendmode="Normal" bumpamount="0.5" diffuse="0.420392 0.420392 0.420392" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="Gray01.001_0066" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#CoolGray01.001_002" name="CoolGray01.001" blendmode="Normal" bumpamount="0.5" diffuse="0.756078 0.756078 0.768627" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/car/car.import" importid="CoolGray01.001_0006" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#_1___Default1_001" name="_1___Default1" blendmode="Normal" bumpamount="0.5" diffuse="0.467451 0.467451 0.467451" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="" importid="_1___Default" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Icon_TurnLeft_ON_001" name="Icon_TurnLeft_ON" blendmode="Normal" bumpamount="0.5" diffuse="1 1 1" diffuselightwrap="0" diffusemap="#Image_001" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="" importid="" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="0" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#Image_001" name="Image" endtime="10000" importfile="" importid="" mappingmode="UV Mapping" pivotu="0" pivotv="0" positionu="0" positionv="0" rotationuv="0" scaleu="1" scalev="1" sourcepath="maps/Icon_TurnLeft_ON.png" subpresentation="" tilingmodehorz="No Tiling" tilingmodevert="No Tiling" type="Image" />
+				<Add ref="#_1___Default2" name="_1___Default2" blendmode="Normal" bumpamount="0.5" diffuse="0.467451 0.467451 0.467451" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="" importid="_1___Default" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="9.60784" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#black_001" name="black" blendmode="Normal" bumpamount="0.5" diffuse="0 0 0" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/Sportscar_15k/Sportscar_15k.import" importid="black" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="0.980392" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#black2_001" name="black2" blendmode="Normal" bumpamount="0.5" diffuse="0 0 0" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/Sportscar_15k/Sportscar_15k.import" importid="black2" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="0.980392" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#body_001" name="body" blendmode="Normal" bumpamount="0.5" diffuse="0.527059 0.0313726 0.0313726" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/Sportscar_15k/Sportscar_15k.import" importid="body" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="31.9608" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#body2_001" name="body2" blendmode="Normal" bumpamount="0.5" diffuse="0.527059 0.0313726 0.0313726" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/Sportscar_15k/Sportscar_15k.import" importid="body2" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="31.9608" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#chrome_003" name="chrome" blendmode="Normal" bumpamount="0.5" diffuse="0.668235 0.668235 0.705882" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/Sportscar_15k/Sportscar_15k.import" importid="chrome_0002" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="6.27451" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#d_glass_001" name="d_glass" blendmode="Normal" bumpamount="0.5" diffuse="0.160894 0.16512 0.154057" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/Sportscar_15k/Sportscar_15k.import" importid="d_glass" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="6.27451" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#glass_tex_001" name="glass_tex" blendmode="Normal" bumpamount="0.5" diffuse="1 1 1" diffuselightwrap="0" diffusemap="#glass_tex_diffusemap_001" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/Sportscar_15k/Sportscar_15k.import" importid="glass_tex" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="5.88235" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#glass_tex_diffusemap_001" name="glass_tex_diffusemap" endtime="10000" importfile="models/Sportscar_15k/Sportscar_15k.import" importid="glass_tex_diffusemap" mappingmode="UV Mapping" pivotu="0" pivotv="0" positionu="0" positionv="0" rotationuv="0" scaleu="1" scalev="1" sourcepath="models/Sportscar_15k/maps/c_tex.jpg" subpresentation="" tilingmodehorz="No Tiling" tilingmodevert="No Tiling" type="Image" />
+				<Add ref="#glass_tex2_001" name="glass_tex2" blendmode="Normal" bumpamount="0.5" diffuse="1 1 1" diffuselightwrap="0" diffusemap="#glass_tex2_diffusemap" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/Sportscar_15k/Sportscar_15k.import" importid="glass_tex2" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="5.88235" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#glass_tex2_diffusemap" name="glass_tex2_diffusemap" endtime="10000" importfile="models/Sportscar_15k/Sportscar_15k.import" importid="glass_tex2_diffusemap" mappingmode="UV Mapping" pivotu="0" pivotv="0" positionu="0" positionv="0" rotationuv="0" scaleu="1" scalev="1" sourcepath="models/Sportscar_15k/maps/c_tex.jpg" subpresentation="" tilingmodehorz="No Tiling" tilingmodevert="No Tiling" type="Image" />
+				<Add ref="#rims_002" name="rims" blendmode="Normal" bumpamount="0.5" diffuse="0.142219 0.142219 0.142219" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/Sportscar_15k/Sportscar_15k.import" importid="rims_0001" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="6.27451" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#rubber_003" name="rubber" blendmode="Normal" bumpamount="0.5" diffuse="0.095729 0.095729 0.095729" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/Sportscar_15k/Sportscar_15k.import" importid="rubber_0003" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="7.84314" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#rubber2_001" name="rubber2" blendmode="Normal" bumpamount="0.5" diffuse="0.095729 0.095729 0.095729" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/Sportscar_15k/Sportscar_15k.import" importid="rubber2" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="7.84314" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<Add ref="#silver_003" name="silver" blendmode="Normal" bumpamount="0.5" diffuse="0.476863 0.486275 0.486275" diffuselightwrap="0" displaceamount="20" emissivecolor="1 1 1" emissivepower="0" fresnelPower="0" importfile="models/Sportscar_15k/Sportscar_15k.import" importid="silver_0002" ior="1.5" opacity="100" shaderlighting="Pixel" sourcepath="" specularamount="0" specularmodel="Default" specularroughness="6.47059" speculartint="1 1 1" translucentfalloff="1" type="Material" vertexcolors="False" />
+				<State id="Scene-Front" name="Front" playmode="Stop at end" playthroughto="Next" >
+					<Set ref="#Scene" >
+						<Action id="Scene-Action" eyeball="True" triggerObject="#Scene" event="onPressureDown" targetObject="#Scene" handler="Go to Slide" >
+							<HandlerArgument name="Slide" type="String" argtype="Slide" value="Angle" />
+						</Action>
+					</Set>
+					<Set ref="#ClusterText" endtime="4000" />
+					<Set ref="#Camera_003" endtime="4000" />
+					<Set ref="#Telltales" endtime="4000" />
+					<Set ref="#TurnSignals" endtime="4000" />
+					<Set ref="#DateAndTime" endtime="4000" />
+					<Set ref="#Cluster3D2" endtime="4000" />
+					<Set ref="#Camera_002" endtime="4000" />
+					<Set ref="#Cluster_001" endtime="4000" />
+					<Set ref="#Background_001" endtime="4000" />
+					<Set ref="#MainGauges" endtime="4000" />
+					<Set ref="#LeftGauge_001" endtime="4000" rotation="-90 0 0" >
+						<AnimationTrack property="rotation.x" type="EaseInOut" dynamic="True" >0 -90 100 100 1 -90 0 0</AnimationTrack>
+						<AnimationTrack property="rotation.y" type="EaseInOut" dynamic="True" >0 0 100 100 1 0 0 0</AnimationTrack>
+						<AnimationTrack property="rotation.z" type="EaseInOut" dynamic="True" >0 0 100 100 1 0 0 0</AnimationTrack>
+					</Set>
+					<Set ref="#GaugeBackground" endtime="4000" />
+					<Set ref="#roundbg_1" endtime="4000" />
+					<Set ref="#qt_gauge_background_round_1" endtime="4000" />
+					<Set ref="#Ring_2" endtime="4000" />
+					<Set ref="#qt_gauge_ring_2" endtime="4000" />
+					<Set ref="#GaugeNeedle" endtime="4000" />
+					<Set ref="#GaugeTickmarks" endtime="4000" />
+					<Set ref="#tickmark_260" endtime="4000" />
+					<Set ref="#qt_gauge_tickmarks_260" endtime="4000" />
+					<Set ref="#GaugeNumbers" endtime="4000" />
+					<Set ref="#kmh260" endtime="4000" />
+					<Set ref="#RightGauge_001" endtime="4000" rotation="-90 0 0" >
+						<AnimationTrack property="rotation.x" type="EaseInOut" dynamic="True" >0 -90 0 0 1 -90 0 0</AnimationTrack>
+						<AnimationTrack property="rotation.y" type="EaseInOut" dynamic="True" >0 0 0 0 1 0 0 0</AnimationTrack>
+						<AnimationTrack property="rotation.z" type="EaseInOut" dynamic="True" >0 0 0 0 1 0 0 0</AnimationTrack>
+					</Set>
+					<Set ref="#GaugeBackground_001" endtime="4000" />
+					<Set ref="#roundbg_1_001" endtime="4000" />
+					<Set ref="#qt_gauge_background_round_1_001" endtime="4000" />
+					<Set ref="#Ring_2_001" endtime="4000" />
+					<Set ref="#qt_gauge_ring_2_001" endtime="4000" />
+					<Set ref="#GaugeNeedle_002" endtime="4000" />
+					<Set ref="#GaugeTickmarks_001" endtime="4000" />
+					<Set ref="#tickmark_8_small" endtime="4000" />
+					<Set ref="#qt_gauge_tickmarks_8_small" endtime="4000" />
+					<Set ref="#GaugeNumbers_001" endtime="4000" />
+					<Set ref="#Rpm7" endtime="4000" />
+					<Set ref="#GaugeText_001" endtime="4000" />
+					<Set ref="#Road3D" endtime="4000" />
+					<Set ref="#Camera_004" endtime="4000" />
+					<Set ref="#Light_001" endtime="4000" />
+					<Set ref="#VignetteEffect_002" endtime="4000" />
+					<Set ref="#Rectangle" endtime="4000" />
+					<Set ref="#BackgroundContent" endtime="4000" />
+					<Set ref="#Camera_001" endtime="4000" />
+					<Set ref="#Light_003" endtime="4000" />
+					<Set ref="#VignetteEffect_001" endtime="4000" />
+					<Set ref="#Map" endtime="4000" />
+					<Set ref="#____Default_007" importfile="models/car/car.import" />
+					<Set ref="#Gray02_023" importfile="models/car/car.import" />
+					<Set ref="#CoolGray04_030" importfile="models/car/car.import" />
+					<Set ref="#car1__env_5_spe0_012" importfile="models/car/car.import" />
+					<Set ref="#_1___Default_006" importfile="models/car/car.import" />
+					<Set ref="#Gray03_002" importfile="models/car/car.import" />
+					<Set ref="#Color_082" importfile="models/car/car.import" />
+					<Set ref="#CoolGray02_002" importfile="models/car/car.import" />
+					<Set ref="#Matte__FF0D0D0D0.002_009" importfile="models/car/car.import" />
+					<Set ref="#Color_083" importfile="models/car/car.import" />
+					<Set ref="#Translucent_Glas.002_004" importfile="models/car/car.import" />
+					<Set ref="#Color_A01_070" importfile="models/car/car.import" />
+					<Set ref="#car__env_5_spec0_030" importfile="models/car/car.import" />
+					<Set ref="#Color_084" importfile="models/car/car.import" />
+					<Set ref="#car1__env_5_s01_006" importfile="models/car/car.import" />
+					<Set ref="#Color_085" importfile="models/car/car.import" />
+					<Set ref="#CoolGray03_012" importfile="models/car/car.import" />
+					<Set ref="#Orange01.002_002" importfile="models/car/car.import" />
+					<Set ref="#vehiclelights03.002_002" importfile="models/car/car.import" />
+					<Set ref="#Matte__FF00CE0F0.002_002" importfile="models/car/car.import" />
+					<Set ref="#vehiclelights01.002_002" importfile="models/car/car.import" />
+					<Set ref="#car__env_5_sp01_004" importfile="models/car/car.import" />
+					<Set ref="#Matte__FF0A0A0A0.002_011" importfile="models/car/car.import" />
+					<Set ref="#vehiclelights02.002_001" importfile="models/car/car.import" />
+					<Set ref="#carpet01_001" importfile="models/car/car.import" />
+					<Set ref="#Gray01_016" importfile="models/car/car.import" />
+					<Set ref="#CoolGray01_002" importfile="models/car/car.import" />
+					<Set ref="#____Default.002_007" importfile="models/car/car.import" />
+					<Set ref="#Gray02.002_023" importfile="models/car/car.import" />
+					<Set ref="#CoolGray04.002_030" importfile="models/car/car.import" />
+					<Set ref="#car1__env_5_spe0.002_012" importfile="models/car/car.import" />
+					<Set ref="#_1___Default.002_006" importfile="models/car/car.import" />
+					<Set ref="#Gray03.002_002" importfile="models/car/car.import" />
+					<Set ref="#Color_086" importfile="models/car/car.import" />
+					<Set ref="#CoolGray02.002_002" importfile="models/car/car.import" />
+					<Set ref="#Matte__FF0D0D0D0.001_009" importfile="models/car/car.import" />
+					<Set ref="#Color_087" importfile="models/car/car.import" />
+					<Set ref="#Translucent_Glas.001_004" importfile="models/car/car.import" />
+					<Set ref="#Color_A01.002_070" importfile="models/car/car.import" />
+					<Set ref="#car__env_5_spec0.002_030" importfile="models/car/car.import" />
+					<Set ref="#Color_088" importfile="models/car/car.import" />
+					<Set ref="#car1__env_5_s01.002_006" importfile="models/car/car.import" />
+					<Set ref="#Color_089" importfile="models/car/car.import" />
+					<Set ref="#CoolGray03.002_012" importfile="models/car/car.import" />
+					<Set ref="#Orange01.001_002" importfile="models/car/car.import" />
+					<Set ref="#vehiclelights03.001_002" importfile="models/car/car.import" />
+					<Set ref="#Matte__FF00CE0F0.001_002" importfile="models/car/car.import" />
+					<Set ref="#vehiclelights01.001_002" importfile="models/car/car.import" />
+					<Set ref="#car__env_5_sp01.002_004" importfile="models/car/car.import" />
+					<Set ref="#Matte__FF0A0A0A0.001_011" importfile="models/car/car.import" />
+					<Set ref="#vehiclelights02.001_001" importfile="models/car/car.import" />
+					<Set ref="#carpet01.002_001" importfile="models/car/car.import" />
+					<Set ref="#Gray01.002_016" importfile="models/car/car.import" />
+					<Set ref="#CoolGray01.002_002" importfile="models/car/car.import" />
+					<Set ref="#____Default.001_007" importfile="models/car/car.import" />
+					<Set ref="#Gray02.001_023" importfile="models/car/car.import" />
+					<Set ref="#CoolGray04.001_030" importfile="models/car/car.import" />
+					<Set ref="#car1__env_5_spe0.001_012" importfile="models/car/car.import" />
+					<Set ref="#_1___Default.001_006" importfile="models/car/car.import" />
+					<Set ref="#Gray03.001_002" importfile="models/car/car.import" />
+					<Set ref="#Color_090" importfile="models/car/car.import" />
+					<Set ref="#CoolGray02.001_002" importfile="models/car/car.import" />
+					<Set ref="#Matte__FF0D0D0D0_009" importfile="models/car/car.import" />
+					<Set ref="#Color_091" importfile="models/car/car.import" />
+					<Set ref="#Translucent_Glas_004" importfile="models/car/car.import" />
+					<Set ref="#Color_A01.001_070" importfile="models/car/car.import" />
+					<Set ref="#car__env_5_spec0.001_030" importfile="models/car/car.import" />
+					<Set ref="#Color_092" importfile="models/car/car.import" />
+					<Set ref="#car1__env_5_s01.001_006" importfile="models/car/car.import" />
+					<Set ref="#Color_093" importfile="models/car/car.import" />
+					<Set ref="#CoolGray03.001_012" importfile="models/car/car.import" />
+					<Set ref="#Orange01_002" importfile="models/car/car.import" />
+					<Set ref="#vehiclelights03_002" importfile="models/car/car.import" />
+					<Set ref="#Matte__FF00CE0F0_002" importfile="models/car/car.import" />
+					<Set ref="#vehiclelights01_002" importfile="models/car/car.import" />
+					<Set ref="#car__env_5_sp01.001_004" importfile="models/car/car.import" />
+					<Set ref="#Matte__FF0A0A0A0_011" importfile="models/car/car.import" />
+					<Set ref="#vehiclelights02_001" importfile="models/car/car.import" />
+					<Set ref="#carpet01.001_001" importfile="models/car/car.import" />
+					<Set ref="#Gray01.001_016" importfile="models/car/car.import" />
+					<Set ref="#CoolGray01.001_002" importfile="models/car/car.import" />
+					<Set ref="#Image_001" endtime="10000" />
+					<Set ref="#glass_tex_diffusemap_001" endtime="10000" />
+					<Set ref="#glass_tex2_diffusemap" endtime="10000" />
+					<Add ref="#dateAndTime_001" name="dateAndTime" endtime="4000" locale="en_EN" target="#DateAndTime" timeformat="hh:mm:ss" />
+					<Add ref="#Car" name="Car" controlledproperty="$roadOpa @timeline" endtime="4000" position="14.2649 -2.34836 -562.801" scale="0.15 0.15 0.15" />
+				</State>
+				<State id="Scene-Angle" name="Angle" initialplaystate="Play" playmode="Stop at end" playthroughto="Previous" >
+					<Set ref="#Scene" >
+						<Action id="Scene-Action_001" eyeball="True" triggerObject="#Scene" event="onPressureDown" targetObject="#Scene" handler="Go to Slide" >
+							<HandlerArgument name="Slide" type="String" argtype="Slide" value="Front" />
+						</Action>
+					</Set>
+					<Set ref="#ClusterText" endtime="3000" />
+					<Set ref="#Camera_003" endtime="3000" />
+					<Set ref="#Telltales" endtime="3000" />
+					<Set ref="#TurnSignals" endtime="3000" />
+					<Set ref="#DateAndTime" endtime="3000" />
+					<Set ref="#Cluster3D2" endtime="3000" />
+					<Set ref="#Camera_002" endtime="3000" />
+					<Set ref="#Cluster_001" endtime="3000" />
+					<Set ref="#Background_001" endtime="3000" />
+					<Set ref="#MainGauges" endtime="3000" />
+					<Set ref="#LeftGauge_001" endtime="3000" rotation="-60 -30 0" >
+						<AnimationTrack property="rotation.x" type="EaseInOut" dynamic="True" >0 -90 0 0 1 -60 0 0</AnimationTrack>
+						<AnimationTrack property="rotation.y" type="EaseInOut" dynamic="True" >0 0 0 0 1 -30 0 0</AnimationTrack>
+						<AnimationTrack property="rotation.z" type="EaseInOut" dynamic="True" >0 0 0 0 1 0 0 0</AnimationTrack>
+					</Set>
+					<Set ref="#GaugeBackground" endtime="3000" />
+					<Set ref="#roundbg_1" endtime="3000" />
+					<Set ref="#qt_gauge_background_round_1" endtime="3000" />
+					<Set ref="#Ring_2" endtime="3000" />
+					<Set ref="#qt_gauge_ring_2" endtime="3000" />
+					<Set ref="#GaugeNeedle" endtime="3000" />
+					<Set ref="#GaugeTickmarks" endtime="3000" />
+					<Set ref="#tickmark_260" endtime="3000" />
+					<Set ref="#qt_gauge_tickmarks_260" endtime="3000" />
+					<Set ref="#GaugeNumbers" endtime="3000" />
+					<Set ref="#kmh260" endtime="3000" />
+					<Set ref="#RightGauge_001" endtime="3000" rotation="-60 30 0" >
+						<AnimationTrack property="rotation.x" type="EaseInOut" dynamic="True" >0 -90 0 0 1 -60 0 0</AnimationTrack>
+						<AnimationTrack property="rotation.y" type="EaseInOut" dynamic="True" >0 0 0 0 1 30 0 0</AnimationTrack>
+						<AnimationTrack property="rotation.z" type="EaseInOut" dynamic="True" >0 0 0 0 1 0 0 0</AnimationTrack>
+					</Set>
+					<Set ref="#GaugeBackground_001" endtime="3000" />
+					<Set ref="#roundbg_1_001" endtime="3000" />
+					<Set ref="#qt_gauge_background_round_1_001" endtime="3000" />
+					<Set ref="#Ring_2_001" endtime="3000" />
+					<Set ref="#qt_gauge_ring_2_001" endtime="3000" />
+					<Set ref="#GaugeNeedle_002" endtime="3000" />
+					<Set ref="#GaugeTickmarks_001" endtime="3000" />
+					<Set ref="#tickmark_8_small" endtime="3000" />
+					<Set ref="#qt_gauge_tickmarks_8_small" endtime="3000" />
+					<Set ref="#GaugeNumbers_001" endtime="3000" />
+					<Set ref="#Rpm7" endtime="3000" />
+					<Set ref="#GaugeText_001" endtime="3000" />
+					<Set ref="#Road3D" endtime="3000" eyeball="False" />
+					<Set ref="#Camera_004" endtime="3000" />
+					<Set ref="#Light_001" endtime="3000" />
+					<Set ref="#VignetteEffect_002" endtime="3000" />
+					<Set ref="#Rectangle" endtime="3000" />
+					<Set ref="#BackgroundContent" endtime="3000" />
+					<Set ref="#Camera_001" endtime="3000" />
+					<Set ref="#Light_003" endtime="3000" />
+					<Set ref="#VignetteEffect_001" endtime="3000" />
+					<Set ref="#Map" endtime="3000" />
+					<Set ref="#Image_001" endtime="10000" />
+					<Set ref="#glass_tex_diffusemap_001" endtime="10000" />
+					<Set ref="#glass_tex2_diffusemap" endtime="10000" />
+				</State>
+			</State>
+			<State name="Master Slide" component="#TurnSignals" >
+				<Add ref="#TurnSignals_001" name="TurnSignals" />
+				<Add ref="#Icon_TurnLeft_ON2er" name="Icon_TurnLeft_ON2er" position="400 210 0" rotation="0 0 180" scale="0.7 0.7 1" sourcepath="#Rectangle" >
+					<AnimationTrack property="opacity" type="EaseInOut" >0 100 0 0 1 0 0 0</AnimationTrack>
+				</Add>
+				<Add ref="#Material_001" diffuse="1 1 1" diffusemap="#Material_001_diffusemap" shaderlighting="None" />
+				<Add ref="#Material_001_diffusemap" sourcepath="maps/Icon_TurnLeft_ON.png" />
+				<Add ref="#Icon_TurnLeft_ON" name="Icon_TurnLeft_ON" position="-400 210 0" rotation="0 0 0" scale="0.7 0.7 1" sourcepath="#Rectangle" >
+					<AnimationTrack property="opacity" type="EaseInOut" >0 100 100 100 1 0 0 0</AnimationTrack>
+				</Add>
+				<Add ref="#Material_002" diffuse="1 1 1" diffusemap="#Material_002_diffusemap" shaderlighting="None" />
+				<Add ref="#Material_002_diffusemap" sourcepath="maps/Icon_TurnLeft_ON.png" />
+				<State id="TurnSignals-Slide1" name="Slide1" playmode="Looping" >
+					<Set ref="#TurnSignals_001" endtime="1000" />
+					<Set ref="#Icon_TurnLeft_ON2er" endtime="1000" />
+					<Set ref="#Icon_TurnLeft_ON" endtime="1000" />
+				</State>
+			</State>
+			<State name="Master Slide" component="#GaugeNeedle" >
+				<Add ref="#GaugeNeedle_001" name="GaugeNeedle" endtime="3000" position="0 3 1.31134e-07" rotation="0 -136 0" scale="0.9 0.9 0.9" >
+					<AnimationTrack property="rotation.x" type="EaseInOut" >0 0 100 100 10 6.10667e-13 0 0</AnimationTrack>
+					<AnimationTrack property="rotation.y" type="EaseInOut" >0 -136 100 100 10 134 0 0</AnimationTrack>
+					<AnimationTrack property="rotation.z" type="EaseInOut" >0 0 100 100 10 -1.01778e-12 0 0</AnimationTrack>
+				</Add>
+				<Add ref="#Light" name="Light" brightness="100" endtime="3000" lighttype="Point" position="0 10 12" >
+					<AnimationTrack property="lightdiffuse.x" type="EaseInOut" >0 1 100 100</AnimationTrack>
+					<AnimationTrack property="lightdiffuse.y" type="EaseInOut" >0 1 100 100</AnimationTrack>
+					<AnimationTrack property="lightdiffuse.z" type="EaseInOut" >0 1 100 100</AnimationTrack>
+				</Add>
+				<Add ref="#needle_2" name="needle_2" endtime="3000" importfile="models/needle_2/needle_2.import" sourcepath="models/needle_2/needle_2.import" />
+				<Add ref="#qt_gauge_needles_2" endtime="3000" importfile="models/needle_2/needle_2.import" />
+				<Add ref="#qt_gauge_needles:red_transparent" diffuse="1 1 1" importfile="models/needle_2/needle_2.import" shaderlighting="None" />
+				<Add ref="#qt_gauge_needles:black_solid" diffuse="0.34902 0.34902 0.34902" importfile="models/needle_2/needle_2.import" />
+				<Add ref="#qt_gauge_needles:solidWhite" diffuse="0 0 0" importfile="models/needle_2/needle_2.import" specularamount="2.5" specularreflection="#qt_gauge_needles:solidWhite_specularreflection" />
+				<Add ref="#qt_gauge_needles:solidWhite_specularreflection" mappingmode="Environmental Mapping" sourcepath="maps/OpenfootageNET_garage-512.hdr" />
+				<State id="GaugeNeedle-Slide1" name="Slide1" initialplaystate="Pause" playmode="PingPong" />
+			</State>
+			<State name="Master Slide" component="#GaugeNeedle_002" >
+				<Add ref="#GaugeNeedle_003" name="GaugeNeedle" endtime="3000" rotation="4.07111e-13 -136 4.07111e-13" scale="0.9 0.9 0.9" >
+					<AnimationTrack property="rotation.x" type="EaseInOut" >0 4.07111e-13 0 0 7 0 0 0</AnimationTrack>
+					<AnimationTrack property="rotation.y" type="EaseInOut" >0 -136 0 0 7 136 0 0</AnimationTrack>
+					<AnimationTrack property="rotation.z" type="EaseInOut" >0 4.07111e-13 0 0 7 0 0 0</AnimationTrack>
+				</Add>
+				<Add ref="#Light_002" name="Light" brightness="100" endtime="3000" lighttype="Point" position="0 10 12" />
+				<Add ref="#needle_2_001" name="needle_2" endtime="3000" importfile="models/needle_2/needle_2.import" sourcepath="models/needle_2/needle_2.import" />
+				<Add ref="#qt_gauge_needles_2_001" endtime="3000" importfile="models/needle_2/needle_2.import" />
+				<Add ref="#qt_gauge_needles:red_transparent_001" importfile="models/needle_2/needle_2.import" shaderlighting="None" />
+				<Add ref="#qt_gauge_needles:black_solid_001" diffuse="0.34902 0.34902 0.34902" importfile="models/needle_2/needle_2.import" shaderlighting="Pixel" />
+				<Add ref="#qt_gauge_needles:solidWhite_001" diffuse="0 0 0" importfile="models/needle_2/needle_2.import" specularamount="2.5" specularreflection="#qt_gauge_needles:solidWhite_001_specularreflection" />
+				<Add ref="#qt_gauge_needles:solidWhite_001_specularreflection" mappingmode="Environmental Mapping" sourcepath="maps/OpenfootageNET_garage-512.hdr" />
+				<State id="GaugeNeedle-Slide1_001" name="Slide1" initialplaystate="Play" playmode="PingPong" >
+					<Set ref="#GaugeNeedle_003" endtime="7000" />
+					<Set ref="#Light_002" endtime="7000" />
+					<Set ref="#needle_2_001" endtime="7000" />
+					<Set ref="#qt_gauge_needles_2_001" endtime="7000" />
+				</State>
+			</State>
+			<State name="Master Slide" component="#Car" >
+				<State id="Car-Slide1" name="Slide1" playmode="Looping" >
+					<Add ref="#Sportscar_15k" name="Sportscar_15k" endtime="4000" importfile="models/Sportscar_15k/Sportscar_15k.import" position="0 -65.64 0" rotation="0 -180 0" scale="0.1 0.1 0.1" sourcepath="models/Sportscar_15k/Sportscar_15k.import" >
+						<AnimationTrack property="opacity" type="EaseInOut" >0 0 100 100 1 100 100 100</AnimationTrack>
+						<AnimationTrack property="position.x" type="EaseInOut" >0 0 0 0 2 -96.16 0 0 4 0 0 0</AnimationTrack>
+						<AnimationTrack property="position.y" type="EaseInOut" >0 -65.64 0 0 2 -65.64 0 0 4 -65.64 0 0</AnimationTrack>
+						<AnimationTrack property="position.z" type="EaseInOut" >0 0 0 0 2 0 0 0 4 0 0 0</AnimationTrack>
+					</Add>
+					<Add ref="#BodyFront" endtime="4000" importfile="models/Sportscar_15k/Sportscar_15k.import" />
+					<Add ref="#glass_tex2" name="glass_tex2" endtime="4000" referencedmaterial="#glass_tex" />
+					<Add ref="#rubber2" name="rubber2" endtime="4000" referencedmaterial="#rubber" />
+					<Add ref="#black2" importfile="models/Sportscar_15k/Sportscar_15k.import" />
+					<Add ref="#body2" name="body2" endtime="4000" referencedmaterial="#body" />
+					<Add ref="#backWheels" endtime="4000" importfile="models/Sportscar_15k/Sportscar_15k.import" >
+						<AnimationTrack property="rotation.x" type="EaseInOut" >0 0 0 0 4 900 0 0</AnimationTrack>
+						<AnimationTrack property="rotation.y" type="EaseInOut" >0 0 0 0 4 0 0 0</AnimationTrack>
+						<AnimationTrack property="rotation.z" type="EaseInOut" >0 0 0 0 4 0 0 0</AnimationTrack>
+					</Add>
+					<Add ref="#chrome" importfile="models/Sportscar_15k/Sportscar_15k.import" specularamount="0.5" specularmodel="Default" specularreflection="#chrome_specularreflection" specularroughness="1" />
+					<Add ref="#chrome_specularreflection" mappingmode="Environmental Mapping" sourcepath="maps/OpenfootageNET_garage-512.hdr" />
+					<Add ref="#rubber" importfile="models/Sportscar_15k/Sportscar_15k.import" specularamount="0.1" />
+					<Add ref="#rims" importfile="models/Sportscar_15k/Sportscar_15k.import" specularamount="1" specularreflection="#rims_specularreflection" specularroughness="1" />
+					<Add ref="#rims_specularreflection" mappingmode="Environmental Mapping" sourcepath="maps/OpenfootageNET_garage-512.hdr" />
+					<Add ref="#silver" importfile="models/Sportscar_15k/Sportscar_15k.import" specularamount="0.2" specularreflection="#silver_specularreflection" />
+					<Add ref="#silver_specularreflection" mappingmode="Environmental Mapping" sourcepath="maps/OpenfootageNET_garage-512.hdr" />
+					<Add ref="#BodyBack" endtime="4000" importfile="models/Sportscar_15k/Sportscar_15k.import" />
+					<Add ref="#glass_tex" importfile="models/Sportscar_15k/Sportscar_15k.import" specularreflection="#glass_tex_specularreflection" />
+					<Add ref="#glass_tex_diffusemap" importfile="models/Sportscar_15k/Sportscar_15k.import" />
+					<Add ref="#glass_tex_specularreflection" mappingmode="Environmental Mapping" sourcepath="maps/OpenfootageNET_garage-512.hdr" />
+					<Add ref="#chrome_001" name="chrome" endtime="4000" referencedmaterial="#chrome" />
+					<Add ref="#silver_001" name="silver" endtime="4000" referencedmaterial="#silver" />
+					<Add ref="#body" diffuse="0.286275 0.396078 0.556863" importfile="models/Sportscar_15k/Sportscar_15k.import" ior="0.29" specularamount="0.6" specularreflection="#body_specularreflection" specularroughness="1" speculartint="0.376471 0.376471 0.376471" />
+					<Add ref="#body_specularreflection" mappingmode="Environmental Mapping" sourcepath="maps/OpenfootageNET_garage-512.hdr" />
+					<Add ref="#rubber_001" name="rubber" endtime="4000" referencedmaterial="#rubber" />
+					<Add ref="#black" importfile="models/Sportscar_15k/Sportscar_15k.import" specularreflection="#black_specularreflection" />
+					<Add ref="#black_specularreflection" mappingmode="Environmental Mapping" sourcepath="maps/OpenfootageNET_garage-512.hdr" />
+					<Add ref="#d_glass" diffuse="0.423529 0.423529 0.423529" importfile="models/Sportscar_15k/Sportscar_15k.import" specularamount="0.2" specularreflection="#d_glass_specularreflection" />
+					<Add ref="#d_glass_specularreflection" mappingmode="Environmental Mapping" sourcepath="maps/OpenfootageNET_garage-512.hdr" />
+					<Add ref="#frontWheels" endtime="4000" importfile="models/Sportscar_15k/Sportscar_15k.import" >
+						<AnimationTrack property="rotation.x" type="EaseInOut" >0 0 0 0 4 900 0 0</AnimationTrack>
+						<AnimationTrack property="rotation.y" type="EaseInOut" >0 0 0 0 4 0 0 0</AnimationTrack>
+						<AnimationTrack property="rotation.z" type="EaseInOut" >0 0 0 0 4 0 0 0</AnimationTrack>
+					</Add>
+					<Add ref="#chrome_002" name="chrome" endtime="4000" referencedmaterial="#chrome" />
+					<Add ref="#rubber_002" name="rubber" endtime="4000" referencedmaterial="#rubber" />
+					<Add ref="#rims_001" name="rims" endtime="4000" referencedmaterial="#rims" />
+					<Add ref="#silver_002" name="silver" endtime="4000" referencedmaterial="#silver" />
+				</State>
+			</State>
+			<State name="Master Slide" component="#Rectangle" >
+				<Add ref="#Rectangle_001" name="Rectangle" endtime="3000" opacity="100" position="0 -15 -518" rotation="90 0 0" scale="0.586792 95.052 1" sourcepath="#Rectangle" />
+				<Add ref="#Default" diffusemap="#Default_diffusemap" />
+				<Add ref="#Default_diffusemap" scalev="100" sourcepath="testing" subpresentation="testing" tilingmodehorz="Tiled" tilingmodevert="Tiled" >
+					<AnimationTrack property="positionv" type="EaseInOut" >0 0 0 0 4 0.1 0 0</AnimationTrack>
+				</Add>
+				<State id="Rectangle-Slide1" name="Slide1" playmode="Looping" >
+					<Set ref="#Rectangle_001" endtime="4000" />
+				</State>
+			</State>
+			<State name="Master Slide" component="#Map" initialplaystate="Pause" >
+				<Add ref="#Map_001" name="Map" controlledproperty="" edgetess="1" endtime="3000" innertess="64" opacity="100" position="0 0 0" rotation="60 0 0" scale="1.4 1.4 1" sourcepath="#Rectangle" tessellation="None" >
+					<AnimationTrack property="opacity" type="EaseInOut" >0 0 100 100 2 100 100 100</AnimationTrack>
+				</Add>
+				<Add ref="#Material" bumpamount="4.5" diffuselightwrap="0.24" diffusemap="#Material_diffusemap" displaceamount="0" fresnelPower="0" ior="0.17" opacity="100" shaderlighting="Pixel" specularamount="0.05" specularmodel="Default" specularroughness="0.11089" speculartint="0.607843 0.607843 0.607843" />
+				<Add ref="#Material_diffusemap" sourcepath="Navigation" subpresentation="Navigation" />
+				<State id="Map-Slide1" name="Slide1" initialplaystate="Pause" playmode="Stop at end" >
+					<Set ref="#Map" >
+						<Action id="Map-Action" eyeball="True" triggerObject="#Map" event="onPressureDown" targetObject="#Map" handler="Go to Slide" >
+							<HandlerArgument name="Slide" type="String" argtype="Slide" value="Slide1" />
+						</Action>
+					</Set>
+					<Set ref="#Map_001" endtime="2000" />
+				</State>
+			</State>
+		</Logic>
+	</Project>
+</UIP>

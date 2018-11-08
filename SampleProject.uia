@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<application>
+    <assets initial="SampleProject">
+        <presentation src="SampleProject.uip" id="SampleProject"/>
+        <presentation-qml args="scripts/Navigation.qml" id="Navigation"/>
+        <presentation-qml args="" id="testing"/>
+        <dataInput name="dateAndTime" type="String"/>
+        <dataInput name="mapOpa" type="Ranged Number" max="100" min="0"/>
+        <dataInput name="mapOpacity" type="Float"/>
+        <dataInput name="roadOpa" type="Ranged Number" max="100" min="0"/>
+        <dataInput name="rpm" type="Ranged Number" max="7" min="0"/>
+        <dataInput name="slide" type="String"/>
+        <dataInput name="speed" type="Ranged Number" max="260" min="0"/>
+    </assets>
+    <statemachine ref="#logic">
+        <visual-states>
+            <state ref="Initial">
+                <enter>
+                    <goto-slide rel="next" element="main:Scene"/>
+                </enter>
+            </state>
+        </visual-states>
+    </statemachine>
+</application>

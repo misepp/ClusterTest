@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<UIP Version="1" >
+	<Project Revision="1" >
+		<Graph >
+			<Group id="__import__root__" >
+				<Model id="Mesh71_doo.002" name="Mesh71_doo.002" orientation="Right Handed" position="0 0 -0" rotation="-90 -0 0" rotationorder="XYZr" scale="1 1 1" sourcepath="meshes/Mesh71_doo.002.mesh" >
+					<Material id="_1___Default" name="_1___Default" blendmode="Normal" diffuse="0.467451 0.467451 0.467451" emissivepower="0" opacity="100" specularamount="0" specularroughness="9.60784" />
+				</Model>
+			</Group>
+		</Graph>
+		<Import SrcFile="../../../3dModels/Hyundai/driver_window.fbx" ImageDir="Images" MeshDir="Meshes" >
+			<Mesh >
+				<Source >Mesh71_doo.002</Source>
+				<Dest >meshes/Mesh71_doo.002.mesh</Dest>
+			</Mesh>
+		</Import>
+	</Project>
+</UIP>
