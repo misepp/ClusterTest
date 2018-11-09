@@ -377,8 +377,12 @@
 				<Add ref="#Camera_004" fov="51.12" orthographic="False" scaleanchor="Center" />
 				<Add ref="#Light_001" name="Light" brightness="200" expfade="0" lighttype="Point" position="0 0 -575" />
 				<Add ref="#VignetteEffect_002" name="VignetteEffect" vig_color="0 0 0" vig_radius="0.4" vig_strenght="15" />
-				<Add ref="#Rectangle" name="Rectangle" scale="0.8 0.8 0.8" />
-				<Add ref="#Car" name="Car" controlledproperty="$roadOpa @timeline" position="14.2649 -2.34836 -562.801" scale="0.15 0.15 0.15" />
+				<Add ref="#Rectangle" name="Rectangle" scale="0.8 0.8 0.8" >
+					<AnimationTrack property="opacity" type="EaseInOut" >0 0 100 100 2 100 100 100</AnimationTrack>
+				</Add>
+				<Add ref="#Car" name="Car" controlledproperty="$roadOpa @timeline" position="14.2649 -2.34836 -562.801" scale="0.15 0.15 0.15" >
+					<AnimationTrack property="opacity" type="EaseInOut" >0 0 100 100 2 100 100 100</AnimationTrack>
+				</Add>
 				<Add ref="#BackgroundContent" name="Map" aodither="False" aostrength="0" disabledepthprepass="False" disabledepthtest="False" eyeball="False" height="288" heightunits="pixels" left="20" leftunits="percent" multisampleaa="None" probehorizon="-0.98002" progressiveaa="None" sourcepath="" temporalaa="False" top="20" topunits="percent" width="768" widthunits="pixels" />
 				<Add ref="#Camera_001" fov="4.58" />
 				<Add ref="#Light_003" name="Light" lighttype="Point" position="0 0 -23" />
