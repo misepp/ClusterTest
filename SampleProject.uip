@@ -144,6 +144,13 @@
 					<Camera id="Camera_004" />
 					<Light id="Light_001" />
 					<Effect id="VignetteEffect_002" class="#VignetteEffect" />
+					<Component id="Rectangle" >
+						<Model id="Rectangle_001" >
+							<Material id="Default" name="Default" >
+								<Image id="Default_diffusemap" />
+							</Material>
+						</Model>
+					</Component>
 					<Component id="Car" >
 						<Group id="Sportscar_15k" importid="__import__root__" >
 							<Model id="BodyFront" name="BodyFront" importid="BodyFront" orientation="Right Handed" position="-12.4369 103.274 765.204" rotation="-90 -0 0" rotationorder="XYZr" scale="9.85043 9.85043 9.85043" sourcepath="models/Sportscar_15k/meshes/BodyFront.mesh" >
@@ -189,13 +196,6 @@
 								<ReferencedMaterial id="silver_002" />
 							</Model>
 						</Group>
-					</Component>
-					<Component id="Rectangle" >
-						<Model id="Rectangle_001" >
-							<Material id="Default" name="Default" >
-								<Image id="Default_diffusemap" />
-							</Material>
-						</Model>
 					</Component>
 				</Layer>
 				<Layer id="BackgroundContent" >
@@ -324,6 +324,7 @@
 				<Add ref="#ClusterText" name="Telltales" aodither="False" disabledepthprepass="False" disabledepthtest="False" multisampleaa="SSAA" probebright="231" progressiveaa="8x" temporalaa="True" />
 				<Add ref="#Camera_003" fov="8.16" orthographic="True" position="0 0 -435" />
 				<Add ref="#Telltales" name="Telltales" opacity="100" pivot="-200 105 0" position="-200 105 0" />
+				<Add ref="#TurnLeft" name="TurnLeft" pivot="-400 210 0" position="-400 210 0" />
 				<Add ref="#TurnSignals" name="TurnRight" />
 				<Add ref="#DateAndTime" name="DateAndTime" controlledproperty="$dateAndTime textstring" font="TitilliumWeb-Regular" opacity="93" position="0 193 0" scale="0.2 0.2 0.2" size="120" textstring="Date and Time" />
 				<Add ref="#Cluster3D2" name="Cluster3D" aodither="False" disabledepthprepass="False" disabledepthtest="False" multisampleaa="SSAA" probe2fade="1" probebright="231" probefov="169.26" probehorizon="-1" progressiveaa="8x" temporalaa="True" />
@@ -377,6 +378,7 @@
 				<Add ref="#Light_001" name="Light" brightness="200" expfade="0" lighttype="Point" position="0 0 -575" />
 				<Add ref="#VignetteEffect_002" name="VignetteEffect" vig_color="0 0 0" vig_radius="0.4" vig_strenght="15" />
 				<Add ref="#Rectangle" name="Rectangle" scale="0.8 0.8 0.8" />
+				<Add ref="#Car" name="Car" controlledproperty="$roadOpa @timeline" position="14.2649 -2.34836 -562.801" scale="0.15 0.15 0.15" />
 				<Add ref="#BackgroundContent" name="Map" aodither="False" aostrength="0" disabledepthprepass="False" disabledepthtest="False" eyeball="False" height="288" heightunits="pixels" left="20" leftunits="percent" multisampleaa="None" probehorizon="-0.98002" progressiveaa="None" sourcepath="" temporalaa="False" top="20" topunits="percent" width="768" widthunits="pixels" />
 				<Add ref="#Camera_001" fov="4.58" />
 				<Add ref="#Light_003" name="Light" lighttype="Point" position="0 0 -23" />
@@ -493,6 +495,7 @@
 					<Set ref="#ClusterText" endtime="4000" />
 					<Set ref="#Camera_003" endtime="4000" />
 					<Set ref="#Telltales" endtime="4000" />
+					<Set ref="#TurnLeft" endtime="4000" />
 					<Set ref="#TurnSignals" endtime="4000" />
 					<Set ref="#DateAndTime" endtime="4000" />
 					<Set ref="#Cluster3D2" endtime="4000" />
@@ -538,6 +541,7 @@
 					<Set ref="#Light_001" endtime="4000" />
 					<Set ref="#VignetteEffect_002" endtime="4000" />
 					<Set ref="#Rectangle" endtime="4000" />
+					<Set ref="#Car" endtime="4000" />
 					<Set ref="#BackgroundContent" endtime="4000" />
 					<Set ref="#Camera_001" endtime="4000" />
 					<Set ref="#Light_003" endtime="4000" />
@@ -624,9 +628,7 @@
 					<Set ref="#carpet01.001_001" importfile="models/car/car.import" />
 					<Set ref="#Gray01.001_016" importfile="models/car/car.import" />
 					<Set ref="#CoolGray01.001_002" importfile="models/car/car.import" />
-					<Add ref="#TurnLeft" name="TurnLeft" endtime="4000" pivot="-400 210 0" position="-400 210 0" />
 					<Add ref="#dateAndTime_001" name="dateAndTime" endtime="4000" locale="en_EN" target="#DateAndTime" timeformat="hh:mm:ss" />
-					<Add ref="#Car" name="Car" controlledproperty="$roadOpa @timeline" endtime="4000" position="14.2649 -2.34836 -562.801" scale="0.15 0.15 0.15" />
 				</State>
 				<State id="Scene-Angle" name="Angle" initialplaystate="Play" playmode="Stop at end" playthroughto="Previous" >
 					<Set ref="#Scene" >
@@ -637,6 +639,7 @@
 					<Set ref="#ClusterText" endtime="3000" />
 					<Set ref="#Camera_003" endtime="3000" />
 					<Set ref="#Telltales" endtime="3000" />
+					<Set ref="#TurnLeft" endtime="3000" />
 					<Set ref="#TurnSignals" endtime="3000" />
 					<Set ref="#DateAndTime" endtime="3000" />
 					<Set ref="#Cluster3D2" endtime="3000" />
@@ -682,6 +685,7 @@
 					<Set ref="#Light_001" endtime="3000" />
 					<Set ref="#VignetteEffect_002" endtime="3000" />
 					<Set ref="#Rectangle" endtime="3000" />
+					<Set ref="#Car" endtime="3000" />
 					<Set ref="#BackgroundContent" endtime="3000" />
 					<Set ref="#Camera_001" endtime="3000" />
 					<Set ref="#Light_003" endtime="3000" />
@@ -748,10 +752,19 @@
 					<Set ref="#qt_gauge_needles_2_001" endtime="7000" />
 				</State>
 			</State>
+			<State name="Master Slide" component="#Rectangle" >
+				<Add ref="#Rectangle_001" name="Rectangle" endtime="3000" opacity="100" position="0 -15 -518" rotation="90 0 0" scale="0.586792 95.052 1" sourcepath="#Rectangle" />
+				<Add ref="#Default" diffusemap="#Default_diffusemap" />
+				<Add ref="#Default_diffusemap" scalev="100" sourcepath="testing" subpresentation="testing" tilingmodehorz="Tiled" tilingmodevert="Tiled" >
+					<AnimationTrack property="positionv" type="EaseInOut" >0 0 0 0 4 0.1 0 0</AnimationTrack>
+				</Add>
+				<State id="Rectangle-Slide1" name="Slide1" playmode="Looping" >
+					<Set ref="#Rectangle_001" endtime="4000" />
+				</State>
+			</State>
 			<State name="Master Slide" component="#Car" >
 				<State id="Car-Slide1" name="Slide1" playmode="Looping" >
 					<Add ref="#Sportscar_15k" name="Sportscar_15k" endtime="4000" importfile="models/Sportscar_15k/Sportscar_15k.import" position="0 -65.64 0" rotation="0 -180 0" scale="0.1 0.1 0.1" sourcepath="models/Sportscar_15k/Sportscar_15k.import" >
-						<AnimationTrack property="opacity" type="EaseInOut" >0 0 100 100 1 100 100 100</AnimationTrack>
 						<AnimationTrack property="position.x" type="EaseInOut" >0 0 0 0 2 -96.16 0 0 4 0 0 0</AnimationTrack>
 						<AnimationTrack property="position.y" type="EaseInOut" >0 -65.64 0 0 2 -65.64 0 0 4 -65.64 0 0</AnimationTrack>
 						<AnimationTrack property="position.z" type="EaseInOut" >0 0 0 0 2 0 0 0 4 0 0 0</AnimationTrack>
@@ -795,16 +808,6 @@
 					<Add ref="#rubber_002" name="rubber" endtime="4000" referencedmaterial="#rubber" />
 					<Add ref="#rims_001" name="rims" endtime="4000" referencedmaterial="#rims" />
 					<Add ref="#silver_002" name="silver" endtime="4000" referencedmaterial="#silver" />
-				</State>
-			</State>
-			<State name="Master Slide" component="#Rectangle" >
-				<Add ref="#Rectangle_001" name="Rectangle" endtime="3000" opacity="100" position="0 -15 -518" rotation="90 0 0" scale="0.586792 95.052 1" sourcepath="#Rectangle" />
-				<Add ref="#Default" diffusemap="#Default_diffusemap" />
-				<Add ref="#Default_diffusemap" scalev="100" sourcepath="testing" subpresentation="testing" tilingmodehorz="Tiled" tilingmodevert="Tiled" >
-					<AnimationTrack property="positionv" type="EaseInOut" >0 0 0 0 4 0.1 0 0</AnimationTrack>
-				</Add>
-				<State id="Rectangle-Slide1" name="Slide1" playmode="Looping" >
-					<Set ref="#Rectangle_001" endtime="4000" />
 				</State>
 			</State>
 			<State name="Master Slide" component="#Map" initialplaystate="Pause" >
