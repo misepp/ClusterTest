@@ -324,8 +324,8 @@
 				<Add ref="#ClusterText" name="Telltales" aodither="False" disabledepthprepass="False" disabledepthtest="False" multisampleaa="SSAA" probebright="231" progressiveaa="8x" temporalaa="True" />
 				<Add ref="#Camera_003" fov="8.16" orthographic="True" position="0 0 -435" />
 				<Add ref="#Telltales" name="Telltales" opacity="100" pivot="-200 105 0" position="-200 105 0" />
-				<Add ref="#TurnLeft" name="TurnLeft" pivot="-400 210 0" position="-400 210 0" />
-				<Add ref="#TurnSignals" name="TurnRight" />
+				<Add ref="#TurnLeft" name="TurnLeft" controlledproperty="$leftSignal @timeline" pivot="-400 210 0" position="-400 210 0" />
+				<Add ref="#TurnSignals" name="TurnRight" controlledproperty="$rightSignal @timeline" />
 				<Add ref="#DateAndTime" name="DateAndTime" controlledproperty="$dateAndTime textstring" font="TitilliumWeb-Regular" opacity="93" position="0 193 0" scale="0.2 0.2 0.2" size="120" textstring="Date and Time" />
 				<Add ref="#Cluster3D2" name="Cluster3D" aodither="False" disabledepthprepass="False" disabledepthtest="False" multisampleaa="SSAA" probe2fade="1" probebright="231" probefov="169.26" probehorizon="-1" progressiveaa="8x" temporalaa="True" />
 				<Add ref="#Camera_002" fov="8.16" position="0 0 -435" />
@@ -699,21 +699,21 @@
 			</State>
 			<State name="Master Slide" component="#TurnLeft" >
 				<Add ref="#Icon_TurnLeft_ON" name="Icon_TurnLeft_ON" endtime="1000" position="-400 210 0" rotation="0 0 0" scale="0.7 0.7 1" sourcepath="#Rectangle" >
-					<AnimationTrack property="opacity" type="EaseInOut" >0 100 100 100 1 0 0 0</AnimationTrack>
+					<AnimationTrack property="opacity" type="EaseInOut" >0 0 100 100 1 100 100 100</AnimationTrack>
 				</Add>
 				<Add ref="#Material_002" diffuse="1 1 1" diffusemap="#Material_002_diffusemap" shaderlighting="None" />
 				<Add ref="#Material_002_diffusemap" sourcepath="maps/Icon_TurnLeft_ON.png" />
-				<State id="TurnLeft-Slide1" name="Slide1" playmode="Looping" >
+				<State id="TurnLeft-Slide1" name="Slide1" initialplaystate="Pause" playmode="Looping" >
 					<Set ref="#Icon_TurnLeft_ON" endtime="1000" />
 				</State>
 			</State>
-			<State name="Master Slide" component="#TurnSignals" >
-				<Add ref="#Icon_TurnLeft_ON2er" name="Icon_TurnLeft_ON2er" position="400 210 0" rotation="0 0 180" scale="0.7 0.7 1" sourcepath="#Rectangle" >
-					<AnimationTrack property="opacity" type="EaseInOut" >0 100 0 0 1 0 0 0</AnimationTrack>
+			<State name="Master Slide" component="#TurnSignals" initialplaystate="Play" playmode="Looping" >
+				<Add ref="#Icon_TurnLeft_ON2er" name="Icon_TurnLeft_ON2er" endtime="1000" position="400 210 0" rotation="0 0 180" scale="0.7 0.7 1" sourcepath="#Rectangle" >
+					<AnimationTrack property="opacity" type="EaseInOut" >0 0 100 100 1 100 100 100</AnimationTrack>
 				</Add>
 				<Add ref="#Material_001" diffuse="1 1 1" diffusemap="#Material_001_diffusemap" shaderlighting="None" />
 				<Add ref="#Material_001_diffusemap" sourcepath="maps/Icon_TurnLeft_ON.png" />
-				<State id="TurnRight-Slide1" name="Slide1" playmode="Looping" >
+				<State id="TurnRight-Slide1" name="Slide1" initialplaystate="Pause" playmode="Looping" >
 					<Set ref="#Icon_TurnLeft_ON2er" endtime="1000" />
 				</State>
 			</State>

@@ -1,22 +1,24 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <application>
     <assets initial="SampleProject">
-        <presentation src="SampleProject.uip" id="SampleProject"/>
-        <presentation-qml args="scripts/Navigation.qml" id="Navigation"/>
-        <presentation-qml args="" id="testing"/>
-        <dataInput name="dateAndTime" type="String"/>
-        <dataInput name="mapOpa" type="Ranged Number" max="100" min="0"/>
-        <dataInput name="mapOpacity" type="Float"/>
-        <dataInput name="roadOpa" type="Ranged Number" max="100" min="0"/>
-        <dataInput name="rpm" type="Ranged Number" max="7" min="0"/>
-        <dataInput name="slide" type="String"/>
-        <dataInput name="speed" type="Ranged Number" max="260" min="0"/>
+        <presentation id="SampleProject" src="SampleProject.uip"/>
+        <presentation-qml id="Navigation" args="scripts/Navigation.qml"/>
+        <presentation-qml id="testing" args=""/>
+        <dataInput type="String" name="dateAndTime"/>
+        <dataInput type="Ranged Number" name="leftSignal" min="0" max="100"/>
+        <dataInput type="Ranged Number" name="mapOpa" min="0" max="100"/>
+        <dataInput type="Float" name="mapOpacity"/>
+        <dataInput type="Ranged Number" name="rightSignal" min="0" max="100"/>
+        <dataInput type="Ranged Number" name="roadOpa" min="0" max="100"/>
+        <dataInput type="Ranged Number" name="rpm" min="0" max="7"/>
+        <dataInput type="String" name="slide"/>
+        <dataInput type="Ranged Number" name="speed" min="0" max="260"/>
     </assets>
     <statemachine ref="#logic">
         <visual-states>
             <state ref="Initial">
                 <enter>
-                    <goto-slide rel="next" element="main:Scene"/>
+                    <goto-slide element="main:Scene" rel="next"/>
                 </enter>
             </state>
         </visual-states>
